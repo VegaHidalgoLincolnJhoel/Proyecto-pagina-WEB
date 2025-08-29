@@ -2,7 +2,7 @@
 **Curso:** Taller de Programación Web  
 **Integrantes:**  
 - Lincoln Vega  
-- William Comeca
+- William Oliva
 - Valentino [Apellido]
 - Adrian [Apellido]
 - John [Apellido]
