@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar.bg-body-tertiary.fixed-top {
+    display: block;
+    background-color: rgb(227, 174, 39) !important;
+    padding: 40px 0;
+}
+
+.banner {
+    border-style: solid;
+    border-color: rgb(0, 26, 255);
+    margin-top: 100px;
+    display: grid;
+    place-items: top;
+    /* centra logo + botones */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* pantalla completa */
+    min-height: 220px;
+    max-height: 625px;
+    overflow: hidden;
+}
+
+.banner-img {
+    border-style: solid;
+    border-color: rgb(0, 26, 255);
+    grid-area: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* mantiene proporción y cubre */
+}
+
+.contenido {
+    border-style: solid;
+    border-color: rgb(31, 228, 25);
+    grid-area: 1/1;
+    margin-top: 50px;
+    margin-left: 38%;
+    margin-bottom: 410px;
+    width: 30%;
+    /* se apila sobre la imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    z-index: 1;
+    /* asegura que quede encima */
+    text-align: center;
+}
+
+#logo {
+    border-style: solid;
+    border-color: rgb(208, 255, 0);
+    width: 45%;
+    margin: 5px 0;
+}
+
+.buttons {
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    z-index: 1;
+    /* asegura que quede encima */
+    text-align: center;
+    width: 420px;
+    height: 340px;
+}
+
+.buttons button {
+    background: black;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 12px 30px;
+    margin: 5px 0;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.buttons button:hover {
+    background: #000000c9;
+}
