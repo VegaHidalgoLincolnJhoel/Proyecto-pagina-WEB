@@ -12,7 +12,7 @@
 
 .banner {
     border-style: solid;
-    border-color: rgb(0, 26, 255);
+    border-color: rgb(5, 30, 255);
     margin-top: 100px;
     display: grid;
     place-items: top;
@@ -28,7 +28,7 @@
 
 .banner-img {
     border-style: solid;
-    border-color: rgb(0, 26, 255);
+    border-color: rgb(42, 61, 236);
     grid-area: 1/1;
     width: 100%;
     height: 100%;
@@ -38,7 +38,7 @@
 
 .contenido {
     border-style: solid;
-    border-color: rgb(31, 228, 25);
+    border-color: rgba(32, 228, 25, 0);
     grid-area: 1/1;
     margin-top: 50px;
     margin-left: 38%;
@@ -56,14 +56,14 @@
 
 #logo {
     border-style: solid;
-    border-color: rgb(208, 255, 0);
+    border-color: rgba(208, 255, 0, 0);
     width: 45%;
     margin: 5px 0;
 }
 
 .buttons {
     border-style: solid;
-    border-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,11 +73,13 @@
     text-align: center;
     width: 420px;
     height: 340px;
+    text-decoration: none;
 }
 
 .buttons button {
     background: black;
-    color: white;
+    display: inline-block;
+    color: rgb(255, 255, 255);
     border: none;
     width: 100%;
     height: 100%;
@@ -88,6 +90,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .buttons button:hover {
