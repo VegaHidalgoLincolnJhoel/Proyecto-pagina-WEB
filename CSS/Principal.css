@@ -121,13 +121,15 @@
     text-align: center;
     width: 420px;
     height: 340px;
+    text-decoration: none;
 }
 
 
 /* Botones principales del banner */
 .buttons button {
     background: black;
-    color: white;
+    display: inline-block;
+    color: rgb(255, 255, 255);
     border: none;
     width: 70%;
     height: 17%;
