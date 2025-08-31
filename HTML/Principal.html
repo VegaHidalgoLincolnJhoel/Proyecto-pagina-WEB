@@ -8,18 +8,23 @@
     <link rel="icon" type="image/x-icon" href="../IMG/icono.png">
     <link rel="stylesheet" href="../CSS/Principal.css">
     <!--Fuente-->
-    <link href="https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- Barra de navegación -->
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <nav class="navbar bg-body-tertiary fixed-top" style="z-index: 1030;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">TORI <BR> POLLERIA</BR></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <div class="navbar-logo">
+                <a href="#">
+                    <div><img id="logo1" src="../IMG/LOGO+2+ROJO.png" alt="Logo"></div>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -56,6 +61,22 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Hidden brand</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-success" type="submit">PIDE AQUÍ</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -64,7 +85,7 @@
         <img src="../IMG/detalle+ajita.webp" class="banner-img" alt="Banner" />
 
         <div class="contenido">
-            <img id="logo" src="../IMG/ÍCONOS-06.png" alt="Logo de la Pollería" />
+            <img id="logo2" src="../IMG/ÍCONOS-06.png" alt="Logo de la Pollería" />
 
             <div class="buttons">
                 <button type="buttons"><a href="https://api.whatsapp.com/send/?app_absent=0&phone=%2B51955429299&text&type=phone_number" target="_blank" class="button">WhatsApp</a></button>
@@ -73,8 +94,15 @@
             </div>
         </div>
     </div>
-    
+
     <img src="../IMG/TRES+PLATOS.webp" class="banner-img" alt="Banner" />
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary">
+        <div class="container">
+            <p class="text-center">© 2023 TORI POLLERIA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 
