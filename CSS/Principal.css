@@ -93,3 +93,8 @@
 .buttons button:hover {
     background: #000000c9;
 }
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
