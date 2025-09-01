@@ -4,8 +4,8 @@
 - Lincoln Vega  
 - William Oliva
 - Valentino Loarte
-- Adrian [Apellido]
-- John [Apellido]
+- Adrian Malpartida
+- John Esoinoza
 
 ---
 
