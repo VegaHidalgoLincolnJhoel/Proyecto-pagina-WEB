@@ -5,7 +5,7 @@
 - William Oliva
 - Valentino Loarte
 - Adrian Malpartida
-- John Esoinoza
+- John Espinoza
 
 ---
 
