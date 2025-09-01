@@ -113,15 +113,16 @@
 
 /* Contenedor de los botones principales */
 .buttons {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     z-index: 1;
     text-align: center;
     width: 420px;
     height: 340px;
     text-decoration: none;
+    display: flex;
 }
 
 
@@ -139,7 +140,47 @@
     cursor: pointer;
     transition: 0.3s ease;
     letter-spacing: 2px;
+    align-items: center;
+    justify-content: center;
 }
+
+.buttons2 {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    z-index: 1;
+    text-align: center;
+    width: 420px;
+    height: 340px;
+    text-decoration: none;
+  display: flex;
+    
+}
+.button2{
+    background: black;
+    display: flex;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 70%;
+    height: 17%;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    letter-spacing: 2px;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.button2 a{
+    display: flex;
+    gap: 50px;
+}
+
 
 
 /* Efecto hover en los botones */
@@ -163,3 +204,4 @@ a {
     font-family: 'Thunderhouse Pro', sans-serif !important;
 }
 /**/
+
