@@ -374,4 +374,63 @@ a {
     font-family: 'Thunderhouse Pro', sans-serif !important;
 }
 
-/**/
+/*Botones del banner*/
+
+.buttons button,
+.button2 {
+    background: #C94527; /* Rojo TORI */
+    color: #fff !important;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 32px;
+    margin: 8px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.buttons button:hover,
+.button2:hover {
+    background: #a8321a;
+    transform: scale(1.04);
+}
+
+.buttons a,
+.button2 a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+/* Platos destacados*/
+.container .row img {
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    margin-bottom: 8px;
+}
+
+.container .row h5 {
+    font-family: 'Thunderhouse Pro', sans-serif;
+    color: #C94527;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+/* Footer redes sociales */
+footer .btn-outline-dark {
+    border-radius: 50%;
+    font-size: 28px;
+    margin: 0 6px;
+    background: #fff;
+    color: #C94527 !important;
+    border: 2px solid #C94527;
+    transition: background 0.3s, color 0.3s;
+}
+
+footer .btn-outline-dark:hover {
+    background: #C94527;
+    color: #fff !important;
+}
