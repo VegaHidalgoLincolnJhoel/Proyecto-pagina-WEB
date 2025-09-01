@@ -3,7 +3,7 @@
 **Integrantes:**  
 - Lincoln Vega  
 - William Oliva
-- Valentino [Apellido]
+- Valentino Loarte
 - Adrian [Apellido]
 - John [Apellido]
 
