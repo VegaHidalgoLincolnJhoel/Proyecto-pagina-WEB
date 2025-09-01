@@ -374,4 +374,11 @@ a {
     font-family: 'Thunderhouse Pro', sans-serif !important;
 }
 
+
+
+/* Enlaces en el footer: color negro para mejor visibilidad */
+footer a, .container a {
+    color: #111 !important;
+    font-weight: normal !important;
+}
 /**/
