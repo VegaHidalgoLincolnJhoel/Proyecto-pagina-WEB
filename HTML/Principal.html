@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TORI POLLERIA</title>
     <link rel="icon" type="image/x-icon" href="../IMG/icono.png">
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
@@ -13,7 +12,6 @@
         rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
 </head>
-
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
@@ -34,33 +32,30 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <!-- moved collapse content here so toggler opens the menu correctly -->
                     <a class="navbar-brand" href="#">Nosotros</a>
                     <a class="navbar-brand" href="#">Promos</a>
                     <a class="navbar-brand" href="#">Carta</a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"></a></li>
+                        <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"></a></li>
                     </ul>
+
                     <form class="Redes-Sociales" style="margin-top:1rem;">
                         <button class="instagram" type="button"><i class="fi fi-brands-instagram"></i></button>
                         <button class="facebook" type="button"><i class="fi fi-brands-facebook"></i></button>
                         <button class="tik-tok" type="button"><i class="fi fi-brands-tik-tok"></i></button>
                         <button class="youtube" type="button"><i class="fi fi-brands-youtube"></i></button>
                     </form>
+
                     <form class="Pedidos" style="margin-top:1rem;">
                         <button class="btn btn-outline-success" type="submit">PIDE AQUÍ</button>
                     </form>
                 </div>
             </div>
+        </div>
     </nav>
+
     <!-- Banner de la Pollería -->
     <div class="banner">
         <img src="../IMG/detalle+ajita.webp" class="banner-img" alt="Banner" />
@@ -69,41 +64,42 @@
             <img id="logo2" src="../IMG/ÍCONOS-06.png" alt="Logo de la Pollería" />
 
             <div class="buttons">
-                <button type="buttons"><a
-                        href="https://api.whatsapp.com/send/?app_absent=0&phone=%2B51955429299&text&type=phone_number"
-                        target="_blank" class="button">WhatsApp</a></button>
-                <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="boton">Pedido
-                        online</a></button>
-                <button type="buttons"><a href="tel:015006188" target="_blank" class="boton">Llámanos aquí</a></button>
+                <button type="button">
+                    <a href="https://api.whatsapp.com/send/?app_absent=0&phone=%2B51955429299&text&type=phone_number" target="_blank" class="boton">WhatsApp</a>
+                </button>
+                <button type="button">
+                    <a href="https://delivery.tori.pe/" target="_blank" class="boton">Pedido online</a>
+                </button>
+                <button type="button">
+                    <a href="tel:015006188" class="boton">Llámanos aquí</a>
+                </button>
             </div>
         </div>
     </div>
-    <img src="../IMG/TRES+PLATOS.webp" class="banner-img" alt="Banner" />
-    <div>
-        <h2>
-            <p class="text-center">DESCUBRE TODO LO QUE TENEMOS PARA TI:</p>
-        </h2>
-        <h4>
-            <p class="text-center">Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya famosas salsas
-                MT y mucho más.</p>
-        </h4>
-        <div class="contenido">
-            <div class="buttons">
-                <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta
-                        delivery</a></button>
-                <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta
-                        Salon</a></button>
-            </div>
-        </div>
 
-    </div>
+    <!-- Sección posterior al banner envuelta para controlar stacking -->
+    <main class="section-after-banner">
+        <img src="../IMG/TRES+PLATOS.webp" class="section-img" alt="Platos" />
+        <div>
+            <h2><p class="text-center">DESCUBRE TODO LO QUE TENEMOS PARA TI:</p></h2>
+            <h4><p class="text-center">Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya famosas salsas MT y mucho más.</p></h4>
+
+            <div class="contenido">
+                <div class="buttons2">
+                    <button type="button"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta delivery</a></button>
+                    <button type="button"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta Salon</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <!-- Footer -->
     <footer class="bg-body-tertiary">
         <div class="container">
             <p class="text-center">© 2023 TORI POLLERIA. Todos los derechos reservados.</p>
         </div>
     </footer>
+
     <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
