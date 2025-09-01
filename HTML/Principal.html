@@ -6,79 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORI POLLERIA</title>
     <link rel="icon" type="image/x-icon" href="../IMG/icono.png">
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/Principal.css">
     <!--Fuente-->
     <link href="https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro"
         rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
 </head>
 
 <body>
     <!-- Barra de navegación -->
-    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
         <div class="container-fluid">
             <div class="navbar-logo">
                 <a href="#">
                     <div><img id="logo1" src="../IMG/LOGO+2+ROJO.png" alt="Logo"></div>
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <!-- moved collapse content here so toggler opens the menu correctly -->
+                    <a class="navbar-brand" href="#">Nosotros</a>
+                    <a class="navbar-brand" href="#">Promos</a>
+                    <a class="navbar-brand" href="#">Carta</a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="Redes-Sociales" style="margin-top:1rem;">
+                        <button class="instagram" type="button"><i class="fi fi-brands-instagram"></i></button>
+                        <button class="facebook" type="button"><i class="fi fi-brands-facebook"></i></button>
+                        <button class="tik-tok" type="button"><i class="fi fi-brands-tik-tok"></i></button>
+                        <button class="youtube" type="button"><i class="fi fi-brands-youtube"></i></button>
+                    </form>
+                    <form class="Pedidos" style="margin-top:1rem;">
+                        <button class="btn btn-outline-success" type="submit">PIDE AQUÍ</button>
                     </form>
                 </div>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">Hidden brand</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success" type="submit">PIDE AQUÍ</button>
-                </form>
             </div>
-        </div>
     </nav>
     <!-- Banner de la Pollería -->
     <div class="banner">
@@ -88,29 +69,41 @@
             <img id="logo2" src="../IMG/ÍCONOS-06.png" alt="Logo de la Pollería" />
 
             <div class="buttons">
-                <button type="buttons"><a href="https://api.whatsapp.com/send/?app_absent=0&phone=%2B51955429299&text&type=phone_number" target="_blank" class="button">WhatsApp</a></button>
-                <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="boton">Pedido online</a></button>
+                <button type="buttons"><a
+                        href="https://api.whatsapp.com/send/?app_absent=0&phone=%2B51955429299&text&type=phone_number"
+                        target="_blank" class="button">WhatsApp</a></button>
+                <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="boton">Pedido
+                        online</a></button>
                 <button type="buttons"><a href="tel:015006188" target="_blank" class="boton">Llámanos aquí</a></button>
             </div>
         </div>
     </div>
-<img src="../IMG/TRES+PLATOS.webp" class="banner-img" alt="Banner" />
-<div>
-    <h2><p class="text-center">DESCUBRE TODO LO QUE TENEMOS PARA TI:</p></h2>
-    <h4><p class="text-center">Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya famosas salsas MT y mucho más.</p></h4>
-<div class="contenido">
-    <div class="buttons">
-        <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta delivery</a></button>
-        <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta Salon</a></button>
-    </div>
-</div>
+    <img src="../IMG/TRES+PLATOS.webp" class="banner-img" alt="Banner" />
+    <div>
+        <h2>
+            <p class="text-center">DESCUBRE TODO LO QUE TENEMOS PARA TI:</p>
+        </h2>
+        <h4>
+            <p class="text-center">Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya famosas salsas
+                MT y mucho más.</p>
+        </h4>
+        <div class="contenido">
+            <div class="buttons">
+                <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta
+                        delivery</a></button>
+                <button type="buttons"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta
+                        Salon</a></button>
+            </div>
+        </div>
 
-</div>
-<!-- Footer -->
+    </div>
+    <!-- Footer -->
     <footer class="bg-body-tertiary">
         <div class="container">
             <p class="text-center">© 2023 TORI POLLERIA. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

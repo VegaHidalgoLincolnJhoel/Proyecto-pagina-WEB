@@ -1,18 +1,81 @@
-
 /* Contenedor principal del navbar para superponer elementos */
 .navbar-superpuesto {
-    display: grid; /* Permite superposición de elementos hijos */
-    grid-template-areas: 'superpuesto'; /* Define área de superposición */
-    position: relative; /* Necesario para posicionamiento absoluto de hijos */
+    display: grid;
+    /* Permite superposición de elementos hijos */
+    grid-template-areas: 'superpuesto';
+    /* Define área de superposición */
+    position: relative;
+    /* Necesario para posicionamiento absoluto de hijos */
     width: 100%;
-    height: 100px; /* Altura del navbar */
+    /* Altura del navbar */
 }
 
-/*Boton del Navbar*/
-.d-flex {
+/*------------------------------------------------------------------------------*/
+/*Contenedor del Boton de Redes Sociales*/
+.Redes-Sociales {
     display: flex !important;
-    margin-right: 50px;
-    grid-area: superpuesto; /* Ubica el botón en el área definida */
+    margin-right: 20px;
+    grid-area: superpuesto;
+    /* Ubica el botón en el área definida */
+    z-index: 2;
+    padding-top: 5px;
+}
+
+/*REDES SOCIALES*/
+.fi.fi.fi-brands-instagram {
+    color: #C94527 !important;
+    background-color: RGB(227, 174, 40) !important;
+}
+
+.fi.fi.fi-brands-facebook {
+    color: #C94527 !important;
+    background-color: RGB(227, 174, 40) !important;
+}
+
+.fi.fi.fi-brands-tik-tok {
+    color: #C94527 !important;
+    background-color: RGB(227, 174, 40) !important;
+}
+
+.fi.fi-brands-youtube {
+    color: #C94527 !important;
+    background-color: RGB(227, 174, 40) !important;
+}
+
+.instagram{
+    background-color: RGB(227, 174, 40) !important;
+    border-color: #00000000;
+    font-size: 20px;   
+    margin-right: 20px;
+}
+
+.facebook{
+    background-color: RGB(227, 174, 40) !important;
+    border-color: #00000000;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.tik-tok{
+    background-color: RGB(227, 174, 40) !important;
+    border-color: #00000000;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.youtube{
+    background-color: RGB(227, 174, 40) !important;
+    border-color: #00000000;
+    font-size: 20px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+.Pedidos {
+    display: flex !important;
+    margin-right: 36px;
+    grid-area: superpuesto;
+    /* Ubica el botón en el área definida */
     z-index: 2;
 }
 
@@ -21,40 +84,89 @@
     border-color: #00000000;
     border-radius: 50px;
     color: white;
-    width: 150px;
-    height: 70px;
+    width: 125px;
+    height: 65px;
+    font-family: 'Thunderhouse Pro', sans-serif !important;
+    padding-bottom: 16px;
+    letter-spacing: 2px;
 }
 
 
 /* Logo centrado y superpuesto en el navbar */
 .navbar-logo {
-    grid-area: superpuesto; /* Ubica el logo en el área definida */
-    position: absolute; /* Permite superposición sobre otros elementos */
+    grid-area: superpuesto;
+    /* Ubica el logo en el área definida */
+    position: absolute;
+    /* Permite superposición sobre otros elementos */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 60px 0;
-    display: flex; /* Centra el logo horizontal y verticalmente */
+    display: flex;
+    /* Centra el logo horizontal y verticalmente */
     justify-content: center;
     align-items: center;
-    z-index: 3; /* Asegura que el logo esté encima */
+    z-index: 3;
+    /* Asegura que el logo esté encima */
 }
 
 
 /* Limita el tamaño del logo para evitar desbordes */
 #logo1,
 .navbar-logo img {
-    max-width: 123px;
+    max-width: 124.5px;
     height: auto;
     z-index: 4;
 }
 
+/* Asegura que el toggler quede encima del logo y sea clicable */
+.navbar-toggler {
+    z-index: 6;
+    border: none;
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 576px) {
+    /* Reduce padding del navbar para evitar solapamientos */
+    .navbar.navbar-expand-lg.bg-body-tertiary {
+        padding: 12px 0;
+    }
+
+    /* Reduce tamaño del logo en móvil */
+    #logo1,
+    .navbar-logo img {
+        max-width: 96px;
+    }
+
+    /* Ajusta el logo dentro del navbar para no cubrir todo el alto */
+    .navbar-logo {
+        top: 0;
+        bottom: auto;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none; /* evita que el logo bloquee clicks; sus hijos pueden reactivar */
+    }
+
+    /* Permite que botones dentro de .navbar-logo reciban clicks */
+    .navbar-logo a,
+    .navbar-logo img {
+        pointer-events: auto;
+    }
+}
+
 /* Reset de estilos base para todos los elementos */
 * {
+    border-style: solid;
+border-color: aliceblue;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Evita scroll horizontal global causado por elementos que sobresalgan */
+html, body {
+    overflow-x: hidden;
 }
 
 
@@ -62,52 +174,73 @@
 .navbar.navbar-expand-lg.bg-body-tertiary {
     display: block;
     background-color: rgb(227, 174, 39) !important;
-    padding: 40px 0;
+    padding: 27.5px 0;
 }
 
 
 /* Banner principal con imagen de fondo */
 .banner {
-    display: grid; /* Permite superponer contenido sobre la imagen */
-    place-items: start; /* Alinea el contenido arriba */
+    display: grid;
+    place-items: center; /* centrar verticalmente logo + botones sobre la imagen */
     position: relative;
-    width: 100%; /* Ocupa todo el ancho de la ventana */
-    min-height: 220px;
-    max-height: 625px;
-    overflow: hidden; /* Oculta el contenido que se desborde */
+    width: 100%; /* usar % evita problemas con scroll horizontal */
+    min-height: 48vh; /* ajuste base para escritorio */
+    max-height: 60vh;
+    overflow: hidden; /* recorta la imagen ampliada */
 }
 
 
-/* Imagen de fondo del banner, cubre todo el área */
-.banner-img {
+/* Imagen de fondo del banner, cubre todo el área; selector limitado a la imagen dentro de .banner
+   para no afectar otras imágenes con la misma clase fuera del banner */
+.banner > .banner-img {
     grid-area: 1/1;
     width: 100%;
-    height: 64%;
+    height: 100%;
     object-fit: cover;
+        transform: scale(1.03); /* ligero zoom, evita cortes extra en móviles */
+        /* usar porcentajes en object-position hace el recorte responsivo */
+        object-position: 50% 30%; /* centra horizontal y mueve foco ligeramente hacia arriba */
+        transform-origin: 50% 30%; /* origen del zoom cerca del foco */
+    display: block;
+    margin: 0; /* evita márgenes que sumen ancho */
+    will-change: transform;
+        transition: transform 0.6s ease, object-position 0.6s ease;
+    z-index: 1;
+}
+
+/* Asegura que todas las imágenes no excedan el ancho de su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
 /* Contenido superpuesto sobre el banner (logo y botones) */
 .contenido {
+    border-style: solid;
+    border-color: aliceblue;
     grid-area: 1/1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    z-index: 1;
+    z-index: 4; /* asegurar contenido encima de la imagen */
     text-align: center;
     align-items: center;
     justify-content: center;
-    
 }
 
 
 /* Logo grande dentro del banner */
 #logo2 {
-    width: 18%;
+    border-style: solid;
+    border-color: aliceblue;
+    width: 24%;
+    max-width: 180px; /* evita que el logo crezca demasiado en pantallas grandes */
     margin: 5px 0;
-    margin-top: 50px;
+    margin-top: 24px;
 }
 
 
@@ -117,23 +250,42 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    z-index: 1;
+    z-index: 5; /* encima de la imagen */
     text-align: center;
-    width: 420px;
-    height: 340px;
+    max-width: 420px; /* mantiene el diseño en pantallas grandes */
+    width: 80%; /* se adapta en pantallas pequeñas */
+    height: auto;
     text-decoration: none;
     display: flex;
+}
+
+/* Ajustes para pantallas muy grandes (desktop amplio) */
+@media (min-width: 1200px) {
+    .banner {
+        min-height: 50vh;
+        max-height: 58vh;
+    }
+
+    #logo2 {
+        width: 16%;
+        max-width: 200px;
+    }
+
+    .navbar.navbar-expand-lg.bg-body-tertiary {
+        padding: 22px 0;
+    }
 }
 
 
 /* Botones principales del banner */
 .buttons button {
     background: black;
-    display: inline-block;
+    display: inline-flex;
     color: rgb(255, 255, 255);
     border: none;
-    width: 70%;
-    height: 17%;
+    width: 100%;
+    height: auto;
+    padding: 12px 24px;
     border-radius: 50px;
     font-size: 20px;
     font-weight: bold;
@@ -142,6 +294,26 @@
     letter-spacing: 2px;
     align-items: center;
     justify-content: center;
+}
+
+/* Ajustes adicionales para móviles pequeños */
+@media (max-width: 576px) {
+    .banner {
+        min-height: 48vh; /* menos alto en móviles para no empujar contenido */
+        max-height: 62vh;
+    }
+
+    .banner > .banner-img {
+        transform: scale(1.05);
+        object-position: 50% 28%;
+        transform-origin: 50% 28%;
+    }
+
+    #logo2 { width: 34%; margin-top: 24px; }
+
+    .buttons { width: 90%; gap: 12px; }
+
+    .buttons button { font-size: 18px; padding: 10px 18px; }
 }
 
 .buttons2 {
@@ -155,10 +327,11 @@
     width: 420px;
     height: 340px;
     text-decoration: none;
-  display: flex;
-    
+    display: flex;
+
 }
-.button2{
+
+.button2 {
     background: black;
     display: flex;
     color: rgb(0, 0, 0);
@@ -173,10 +346,10 @@
     letter-spacing: 2px;
     align-items: center;
     justify-content: center;
- 
+
 }
 
-.button2 a{
+.button2 a {
     display: flex;
     gap: 50px;
 }
@@ -203,5 +376,5 @@ a {
 .navbar-brand {
     font-family: 'Thunderhouse Pro', sans-serif !important;
 }
-/**/
 
+/**/
