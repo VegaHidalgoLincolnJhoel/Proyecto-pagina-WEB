@@ -14,55 +14,71 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-        <div class="container-fluid">
-            <div class="navbar-logo">
-                <a href="#">
-                    <div><img id="logo1" src="../IMG/LOGO+2+ROJO.png" alt="Logo"></div>
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <a class="navbar-brand" href="#">Nosotros</a>
-                    <a class="navbar-brand" href="#">Promos</a>
-                    <a class="navbar-brand" href="#">Carta</a>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"></a></li>
-                        <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"></a></li>
-                    </ul>
-
-                    <form class="Redes-Sociales" style="margin-top:1rem;">
-                        <button class="instagram" type="button"><i class="fi fi-brands-instagram"></i></button>
-                        <button class="facebook" type="button"><i class="fi fi-brands-facebook"></i></button>
-                        <button class="tik-tok" type="button"><i class="fi fi-brands-tik-tok"></i></button>
-                        <button class="youtube" type="button"><i class="fi fi-brands-youtube"></i></button>
-                    </form>
-
-                    <form class="Pedidos" style="margin-top:1rem;">
-                        <button class="btn btn-outline-success" type="submit">PIDE AQUÍ</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Barra de navegación navbar -->
+    <nav class="navbar" style="background-color: #ffd000;" data-bs-theme="light">
+  <div class="container-fluid">
+    <nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../IMG/LOGO+2+ROJO.webp" alt="Bootstrap" width="150">
+    </a>
+  </div>
+  
+</nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <img id="logo2" src="../IMG/ÍCONOS-06.png" width="100" height="100" alt="Logo de la Pollería" />
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+     
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PROMOS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Carta Delivary</a></li>
+              <li><a class="dropdown-item" href="#">Carta salon</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Ultimas Promociones</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+        <form>
+        <a href="">
+            <img src="../IMG/ICONO-FACEBOOK.png" width="20" height="20" alt="Facebook" />
+        </a>
+        <a href="">
+            <img src="../IMG/ICONO-INSTAGRAM.png" width="20" height="20" alt="Instagram" />
+        </a>
+        <a href="">
+            <img src="../IMG/ICONO-TIKTOK.jpg" width="20" height="20" alt="Tik Tok" />
+        </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
 
     <!-- Banner de la Pollería -->
     <div class="banner">
         <img src="../IMG/detalle+ajita.webp" class="banner-img" alt="Banner" />
 
         <div class="contenido">
-            <img id="logo2" src="../IMG/ÍCONOS-06.png" alt="Logo de la Pollería" />
+   
 
             <div class="buttons">
                 <button type="button">
