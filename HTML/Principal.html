@@ -19,7 +19,7 @@
         <div class="container-fluid">
             <div class="navbar-logo">
                 <a href="#">
-                    <div><img id="logo1" src="../IMG/LOGO+2+ROJO.png" alt="Logo"></div>
+                    <div><img id="logo1" src="../IMG/LOGO+2+ROJO.png" alt="Logo" width="100"></div>
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -57,47 +57,72 @@
         </div>
     </nav>
 
-    <!-- Banner de la Pollería -->
-    <div class="banner">
-        <img src="../IMG/detalle+ajita.webp" class="banner-img" alt="Banner" />
+<!-- Carrusel Bootstrap -->
+<div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
 
-        <div class="contenido">
-            <img id="logo2" src="../IMG/ÍCONOS-06.png" alt="Logo de la Pollería" />
-
-            <div class="buttons">
-                <button type="button">
-                    <a href="https://api.whatsapp.com/send/?app_absent=0&phone=%2B51955429299&text&type=phone_number" target="_blank" class="boton">WhatsApp</a>
-                </button>
-                <button type="button">
-                    <a href="https://delivery.tori.pe/" target="_blank" class="boton">Pedido online</a>
-                </button>
-                <button type="button">
-                    <a href="tel:015006188" class="boton">Llámanos aquí</a>
-                </button>
-            </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="ratio ratio-16x9">
+        <img src="../IMG/detalle+ajita.webp" class="d-block w-100 img-fluid" alt="Plato principal">
+      </div>
+      <div class="carousel-caption d-md-block">
+        <div class="mb-2">
+          <img src="../IMG/ÍCONOS-06.png" alt="Logo" class="img-fluid" width="60" height="60">
         </div>
+        <div class="d-flex justify-content-center flex-wrap gap-2">
+          <a href="https://api.whatsapp.com/send/?phone=+51955429299" target="_blank" class="btn btn-sm btn-outline-light">WhatsApp</a>
+          <a href="https://delivery.tori.pe/" target="_blank" class="btn btn-sm btn-outline-light">Pedido online</a>
+          <a href="tel:015006188" class="btn btn-sm btn-outline-light">Llámanos</a> 
+        </div>
+      </div>
     </div>
 
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <img src="../IMG/tori.jpg" class="d-block w-100 img-fluid" alt="Ambiente familiar">
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <img src="../IMG/torii.jpg" class="d-block w-100 img-fluid" alt="Promoción especial">
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
     <!-- Sección posterior al banner envuelta para controlar stacking -->
-    <main class="section-after-banner">
-        <img src="../IMG/TRES+PLATOS.webp" class="section-img" alt="Platos" />
-        <div>
-            <h2><p class="text-center">DESCUBRE TODO LO QUE TENEMOS PARA TI:</p></h2>
-            <h4><p class="text-center">Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya famosas salsas MT y mucho más.</p></h4>
+<main class="container text-center py-4">
+  <div class="mb-3">
+    <img src="../IMG/TRES+PLATOS.webp" class="img-fluid rounded" alt="Platos TORI">
+  </div>
 
-            <div class="contenido">
-                <div class="buttons2">
-                    <button type="button"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta delivery</a></button>
-                    <button type="button"><a href="https://delivery.tori.pe/" target="_blank" class="button2">Carta Salon</a></button>
-                </div>
-            </div>
-        </div>
-    </main>
-        
-        <div class="banner-imagen-principal">
-            <img src="../IMG/edit+mesa+familia+cenital+manos.jpg" alt="Banner principal" class="img-fluid w-100" />
-        </div>
+  <h5 class="text-danger fw-bold mb-2">DESCUBRE TODO LO QUE TENEMOS PARA TI:</h5>
+  <p class="mb-3">Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya famosas salsas MT y mucho más.</p>
 
+  <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+    <a href="https://www.tori.pe/carta-delivery" target="_blank" class="btn btn-sm btn-outline-danger">Carta Delivery</a>
+    <a href="https://www.tori.pe/cartasalon" target="_blank" class="btn btn-sm btn-outline-danger">Carta Salón</a>
+  </div>
+</main>
+
+<div class="banner-imagen-principal">
+  <img src="../IMG/edit+mesa+familia+cenital+manos.jpg" alt="Banner principal" class="img-fluid w-100">
+</div>
     <!-- Footer -->
     
     <!-- Footer -->
@@ -121,9 +146,9 @@
     <div class="col-md-3 mb-4">
       <h3 class="text-center" style="background:#C94527;color:#fff;display:inline-block;padding:4px 18px;border-radius:4px;font-family:'Thunderhouse Pro',sans-serif;">METODOS DE PAGO</h3>
       <div class="d-flex justify-content-center gap-2 mb-2">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" style="height:40px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="height:40px;">
-        <img src="Proyecto-pagina-WEB-main\IMG\descarga.png" alt="Diners" style="height:40px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" width="60" height="40">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="60" height="40">
+        <img src="../IMG/images.png" alt="Diners" width="60" height="40">
       </div>
       <p>DELIVERY: TARJETAS DE CRÉDITO Y DÉBITO</p>
     </div>
@@ -136,7 +161,7 @@
       <p><a href="#" style="font-weight:bold;">ATENCIÓN AL CLIENTE</a></p>
       <p><b>TEL.986 592 177</b></p>
       <p><a href="#" style="font-weight:bold;">LIBRO DE RECLAMACIONES</a></p>
-      <img src="https://www.gob.pe/institucion/indecopi/informes-publicaciones/264-libro-de-reclamaciones" alt="Libro de Reclamaciones" style="height:50px;">
+      <img src="../IMG/libro.jpg" alt="Libro de Reclamaciones" style="height:50px;">
     </div>
   </div>
 </div>
