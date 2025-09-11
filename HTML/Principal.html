@@ -13,67 +13,63 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar" style="background-color: #ffd000" data-bs-theme="light">
+ <nav class="navbar navbar-expand-lg" style="background-color: #ffd000;" data-bs-theme="light">
     <div class="container-fluid">
-      <nav class="navbar bg-body-tertiary" style="background-color: #ffd000 !important;">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="../IMG/LOGO+2+ROJO.png" alt="Logo" width="90" height="auto">
-          </a>
-        </div>
-      </nav>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">
+        <img src="../IMG/LOGO+2+ROJO.png" alt="Logo" width="90" height="auto" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <img id="logo2" src="../IMG/ÍCONOS-06.png" width="100" height="100" alt="Logo de la Pollería" />
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                PROMOS
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery">Carta Delivery</a></li>
-                <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon">Carta Salon</a></li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Ultimas Promociones</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">
-              Buscar
-            </button>
-          </form>
-          <p class="mt-4"><b>¡BUSCANOS EN NUESTRAS REDES!</b></p>
-          <form>
-            <a href="https://www.facebook.com/toripolleria/?locale=es_LA">
-              <img src="../IMG/ICONO-FACEBOOK.png" width="20" height="20" alt="Facebook" />
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              PROMOS
             </a>
-            <a href="https://www.instagram.com/toripolleria/">
-              <img src="../IMG/ICONO-INSTAGRAM.png" width="20" height="20" alt="Instagram" />
-            </a>
-            <a href="https://www.tiktok.com/@toripolleriaoficial">
-              <img src="../IMG/ICONO-TIKTOK.jpg" width="20" height="20" alt="Tik Tok" />
-              <a href="https://www.youtube.com/@ToriPolleria">
-              <img src="../IMG/youGpng.png" width="20" height="20" alt="Youtube" />
-            </a>
-          </form>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery">Carta Delivery</a></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon">Carta Salon</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Ultimas Promociones</a></li>
+            </ul>
+          </li>
+        </ul>
+  
+        
+  
+        <div class="d-flex align-items-center">
+          <p class="mb-0 me-3"><b>¡BUSCANOS EN NUESTRAS REDES!</b></p>
+          <a href="https://www.facebook.com/toripolleria/?locale=es_LA" class="me-2">
+            <img src="../IMG/ICONO-FACEBOOK.png" width="20" height="20" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/toripolleria/" class="me-2">
+            <img src="../IMG/ICONO-INSTAGRAM.png" width="20" height="20" alt="Instagram" />
+          </a>
+          <a href="https://www.tiktok.com/@toripolleriaoficial" class="me-2">
+            <img src="../IMG/ICONO-TIKTOK.jpg" width="20" height="20" alt="Tik Tok" />
+          </a>
+          <a href="https://www.youtube.com/@ToriPolleria">
+            <img src="../IMG/youGpng.png" width="20" height="20" alt="Youtube" />
+          </a>
         </div>
       </div>
     </div>
