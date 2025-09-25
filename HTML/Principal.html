@@ -7,7 +7,8 @@
   <title>TORI POLLERIA</title>
   <link rel="icon" type="image/x-icon" href="../IMG/icono.png" />
   <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
-  <!--No Usar-->
+  <link rel="stylesheet" href="../PrincipalCSS.css"/>
+   <!--No Usar-->
   <!-- <link rel="stylesheet" href="../CSS/Principal.css"> -->
 </head>
 
@@ -33,7 +34,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
+            <a class="nav-link active" aria-current="page" href="#"><span class="LetraNegrita">NOSOTROS</span></a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -43,13 +44,13 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              PROMOS
+          <span class="LetraNegrita">PROMOS</span>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery">Carta Delivery</a></li>
-              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon">Carta Salon</a></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery"><span class="LetraNegrita">Carta Delivery</span></a></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon"><span class="LetraNegrita">Carta Salon</span></a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Ultimas Promociones</a></li>
+              <li><a class="dropdown-item" href="#"><span class="LetraNegrita">Ultimas Promociones</span></a></li>
             </ul>
           </li>
         </ul>
@@ -77,7 +78,7 @@
   <!-- Fin Navbar -->
 
   <!-- Carrusel Bootstrap -->
-  <div class="container">
+  <div class="container-fluid px-0">
   <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true"
@@ -127,7 +128,7 @@
     <h5 class="text-danger fw-bold mb-2">
       DESCUBRE TODO LO QUE TENEMOS PARA TI:
     </h5>
-    <p class="mb-3">
+    <p>
       Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya
       famosas salsas MT y mucho más.
     </p>
@@ -149,7 +150,7 @@
   <div class="card-group">
     <div class="card">
       <div class="card-body">
-        <h3 class="text-center">
+        <h3 class="text-center text-danger fw-bold mb-2">
           SERVICIOS
         </h3>
         <p>
@@ -168,7 +169,7 @@
     </div>
     <div class="card">
       <div class="card-body">
-        <h3 class="text-center">
+        <h3 class="text-center text-danger fw-bold mb-2">
           NOSOTROS
         </h3>
         <p><a href="#" style="font-weight: bold">¡POSTULA AQUÍ!</a></p>
@@ -177,7 +178,7 @@
     </div>
     <div class="card">
       <div class="card-body">
-        <h3 class="text-center">
+        <h3 class="text-center text-danger fw-bold mb-2">
           METODOS de PAGO
         </h3>
         <section>
@@ -198,7 +199,7 @@
 
     <div class="card">
       <div class="card-body">
-        <h3 class="text-center">
+        <h3 class="text-center text-danger fw-bold mb-2">
           POLITICAS Y MAS
         </h3>
         <p>CHMM S.A.C. - 20606663227</p>
@@ -229,10 +230,8 @@
     </div>
   </footer>
   <!-- fin footer-->
-
   <!-- ...código existente... -->
   <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
   <!-- ...código existente... -->
 </body>
-
 </html>

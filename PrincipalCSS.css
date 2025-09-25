@@ -1,0 +1,8 @@
+.LetraNegrita{
+    font-weight: normal;
+    transition: font-weight 0.0s linear;
+}
+
+.LetraNegrita:hover{
+    font-weight: bold;
+}
