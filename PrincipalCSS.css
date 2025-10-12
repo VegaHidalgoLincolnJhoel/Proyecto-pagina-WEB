@@ -48,7 +48,7 @@
 
 .AumentarImagenLibro{
     height: 60px;
-    transition: 0.2s linear;
+    transition: 0.15s linear;
 }
 
 .AumentarImagenLibro:hover{
