@@ -9,6 +9,88 @@
   <link rel="icon" type="image/x-icon" href="../IMG/icono.png" />
   <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../PrincipalCSS.css" />
+  
+  <!-- CSS Grid y Flexbox personalizado -->
+  <style>
+    /* CSS Grid Layout para las Cards */
+    .cards-grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    /* Grid Items (Cards) */
+    .grid-card {
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .grid-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Flexbox dentro de cada card para alinear contenido */
+    .grid-card .card-body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .grid-card .flex-grow-1 {
+      flex-grow: 1;
+    }
+    
+    .grid-card .mt-auto {
+      margin-top: auto;
+    }
+    
+    /* Responsive Grid */
+    @media (max-width: 768px) {
+      .cards-grid-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.5rem;
+      }
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .cards-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1025px) {
+      .cards-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    /* Footer Flexbox Mejorado */
+    .footer-flex-container {
+      min-height: 200px;
+    }
+    
+    .footer-section {
+      min-width: 250px;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-flex-container {
+        text-align: center;
+      }
+      
+      .footer-section {
+        min-width: 100%;
+      }
+    }
+  </style>
+  
   <!--No Usar-->
   <!-- <link rel="stylesheet" href="../CSS/Principal.css"> -->
 </head>
@@ -198,105 +280,99 @@
       <h4 class="text-warning fw-bold mb-4">🍗 ¡No te lo pierdas! 🎉</h4>
     </div>
 
-    <!--Cards-->
+    <!--Cards con CSS Grid Layout-->
     <div class="container-fluid my-5">
-    <div class="row justify-content-center g-4">
-      <!--Card1-->
-      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
-        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
-          <img src="../IMG/card1.webp" class="card-img" alt="card1IMG">
-          <div class="card-body">
-            <h2 class="text-danger fw-bold mb-2">🍗🍟 POLLITO CON PAPAS</h2>
-            <p>1 Pollo TOri + papas + salsas mt (2 la brava + 2 la mayo)</p>
-            <p>*Válido solo para llevar</p>
-            <p><span class="text-decoration-line-through">*Antes S/71.90</span></p>
-            <h2>S/64.90</h2>
-          </div>
+    <div class="cards-grid-container">
+      <!--Card1 - Grid Item-->
+      <div class="card text-start cardColor cardAnimacion grid-card">
+        <img src="../IMG/card1.webp" class="card-img" alt="card1IMG">
+        <div class="card-body d-flex flex-column">
+          <h2 class="text-danger fw-bold mb-2">🍗🍟 POLLITO CON PAPAS</h2>
+          <p class="flex-grow-1">1 Pollo TOri + papas + salsas mt (2 la brava + 2 la mayo)</p>
+          <p>*Válido solo para llevar</p>
+          <p><span class="text-decoration-line-through">*Antes S/71.90</span></p>
+          <h2 class="mt-auto">S/64.90</h2>
         </div>
       </div>
 
-      <!--Card2-->
-      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
-        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
-          <img src="../IMG/card2.webp" class="card-img" alt="card1IMG">
-          <div class="card-body">
-            <h2 class="text-danger fw-bold mb-2">🎉💥 BANQUEROTI 💥🎉</h2>
-            <p>1 pollo TORI + papas + chaufa de guarnición + ensalada + gaseosa 1.5 lt + salsas ( 2 La brava + 2 la mayo
-              +
-              2 la vinagreta + *Opcional 1 La Huacatay). </p>
-            <p><span class="text-decoration-line-through">*antes S/120.60</span></p>
-            <h2>S/95.90</h2>
-          </div>
+      <!--Card2 - Grid Item-->
+      <div class="card text-start cardColor cardAnimacion grid-card">
+        <img src="../IMG/card2.webp" class="card-img" alt="card2IMG">
+        <div class="card-body d-flex flex-column">
+          <h2 class="text-danger fw-bold mb-2">🎉💥 BANQUEROTI 💥🎉</h2>
+          <p class="flex-grow-1">1 pollo TORI + papas + chaufa de guarnición + ensalada + gaseosa 1.5 lt + salsas ( 2 La brava + 2 la mayo + 2 la vinagreta + *Opcional 1 La Huacatay). </p>
+          <p><span class="text-decoration-line-through">*antes S/120.60</span></p>
+          <h2 class="mt-auto">S/95.90</h2>
         </div>
       </div>
 
-      <!--Card3-->
-      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
-        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
-          <img src="../IMG/card3.webp" class="card-img" alt="card1IMG">
-          <div class="card-body">
-            <h2 class="text-danger fw-bold mb-2">🥤🍗 1/2 COMBO TORI BRASA</h2>
-            <p>1/2 pollo TORI + papas + ensalada + 2 gaseosas 500 ml + salsas (2 La Brava + 1 La Mayo + 1 La Vinagreta).
-            </p>
-            <p><span class="text-decoration-line-through">*antes S/74.80</span></p>
-            <h2>S/ 52.90 </h2>
-          </div>
+      <!--Card3 - Grid Item-->
+      <div class="card text-start cardColor cardAnimacion grid-card">
+        <img src="../IMG/card3.webp" class="card-img" alt="card3IMG">
+        <div class="card-body d-flex flex-column">
+          <h2 class="text-danger fw-bold mb-2">🥤🍗 1/2 COMBO TORI BRASA</h2>
+          <p class="flex-grow-1">1/2 pollo TORI + papas + ensalada + 2 gaseosas 500 ml + salsas (2 La Brava + 1 La Mayo + 1 La Vinagreta).</p>
+          <p><span class="text-decoration-line-through">*antes S/74.80</span></p>
+          <h2 class="mt-auto">S/ 52.90</h2>
         </div>
       </div>
 
-      <!--Card4-->
-      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
-        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
-          <img src="../IMG/card4.webp" class="card-img" alt="card1IMG">
-          <div class="card-body">
-            <h2 class="text-danger fw-bold mb-2">🥪⚡ PROMO SANGUCHAZO</h2>
-            <p>01 sanguchazo de Pollo + 01 gaseosa 500 ml.</p>
-            <p><span class="text-decoration-line-through">*antes S/32.40</span></p>
-            <h2>S/ 25.90</h2>
-          </div>
+      <!--Card4 - Grid Item-->
+      <div class="card text-start cardColor cardAnimacion grid-card">
+        <img src="../IMG/card4.webp" class="card-img" alt="card4IMG">
+        <div class="card-body d-flex flex-column">
+          <h2 class="text-danger fw-bold mb-2">🥪⚡ PROMO SANGUCHAZO</h2>
+          <p class="flex-grow-1">01 sanguchazo de Pollo + 01 gaseosa 500 ml.</p>
+          <p><span class="text-decoration-line-through">*antes S/32.40</span></p>
+          <h2 class="mt-auto">S/ 25.90</h2>
         </div>
       </div>
-    </div>
     </div>
   </section>
   <!-- Fin Cards-->
 
 
-  <!-- Footer -->
-  <footer class="bg-body-tertiary">
+  <!-- Footer con Flexbox Layout -->
+  <footer class="bg-body-tertiary py-5">
     <div class="container">
-      <div class="d-flex justify-content-center flex-wrap gap-4">
-        <div class="container">
-        </div>
-        <div class="cards--">
-          <div class="card-body">
-            <p class="card-text" style="font-weight: bold;">🏪 ATENCIÓN EN SALÓN:</p>
-            <p>LUNES A DOMINGOS DE 12:00 P.M. A 10:30 P.M.</p>
-            <p class="card-text" style="font-weight: bold;">🛵 ATENCIÓN DELIVERY:</p>
-            <p>LUNES A DOMINGOS DE 11:30 A.M. A 10:00 P.M.</p>
-            <p class="card-text" style="font-weight: bold;">📍 DIRECCIÓN:</p>
-            <p>C. JOSÉ GÁLVEZ 390, MIRAFLORES</p>
+      <!-- Contenedor principal con Flexbox -->
+      <div class="footer-flex-container d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+        
+        <!-- Columna 1: Información de Contacto -->
+        <div class="footer-section flex-fill">
+          <h5 class="text-danger fw-bold mb-3">📍 INFORMACIÓN DE CONTACTO</h5>
+          <div class="d-flex flex-column gap-2">
+            <p class="mb-1"><strong>🏪 ATENCIÓN EN SALÓN:</strong></p>
+            <p class="text-muted">LUNES A DOMINGOS DE 12:00 P.M. A 10:30 P.M.</p>
+            <p class="mb-1"><strong>🛵 ATENCIÓN DELIVERY:</strong></p>
+            <p class="text-muted">LUNES A DOMINGOS DE 11:30 A.M. A 10:00 P.M.</p>
+            <p class="mb-1"><strong>📍 DIRECCIÓN:</strong></p>
+            <p class="text-muted">C. JOSÉ GÁLVEZ 390, MIRAFLORES</p>
           </div>
         </div>
-        <div class="cards--">
-          <div class="card-body">
-            <ul>
-              <p><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">🔒 POLÍTICA DE PRIVACIDAD</a>
-              </p>
-              <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">🍪 POLÍTICA DE
-                  COOKIES</a></p>
-              <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">📞 TEL. 986 592
-                  177</a></p>
-              <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">📋 LIBRO DE
-                  RECLAMACIONES</a>
-              </p><img src="../IMG/libro.jpg" class="d-block mx-auto AumentarImagenLibro"
-                alt="Libro de Reclamaciones" />
-            </ul>
+
+        <!-- Columna 2: Enlaces Legales -->
+        <div class="footer-section flex-fill">
+          <h5 class="text-danger fw-bold mb-3">📋 INFORMACIÓN LEGAL</h5>
+          <div class="d-flex flex-column gap-2">
+            <a href="#" class="NoColorEnlaces CambiarColor text-decoration-none">🔒 Política de Privacidad</a>
+            <a href="#" class="NoColorEnlaces CambiarColor text-decoration-none">🍪 Política de Cookies</a>
+            <a href="tel:986592177" class="NoColorEnlaces CambiarColor text-decoration-none">📞 TEL. 986 592 177</a>
+            <a href="#" class="NoColorEnlaces CambiarColor text-decoration-none">📋 Libro de Reclamaciones</a>
           </div>
+        </div>
+
+        <!-- Columna 3: Libro de Reclamaciones -->
+        <div class="footer-section d-flex flex-column align-items-center">
+          <h6 class="text-danger fw-bold mb-2">Libro de Reclamaciones</h6>
+          <img src="../IMG/libro.jpg" class="AumentarImagenLibro" alt="Libro de Reclamaciones" style="max-width: 80px;" />
         </div>
       </div>
-      <div class="container">
-        <p class="text-center fs-5">
+      
+      <!-- Copyright centrado -->
+      <hr class="my-4">
+      <div class="d-flex justify-content-center">
+        <p class="text-center fs-6 mb-0">
           © 2025 TORI POLLERIA. Todos los derechos reservados.
         </p>
       </div>
@@ -304,34 +380,7 @@
   </footer>
   <!-- fin footer-->
   
-  <!-- Botón Volver Arriba -->
-  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top" 
-          style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000; border-radius: 50%; width: 50px; height: 50px;">
-    ↑
-  </button>
-
   <!-- Scripts -->
   <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Botón volver arriba
-    let mybutton = document.getElementById("btn-back-to-top");
-    
-    window.onscroll = function () {
-      scrollFunction();
-    };
-    
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-    
-    mybutton.addEventListener("click", function() {
-      window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-  </script>
 </body>
-
 </html>
