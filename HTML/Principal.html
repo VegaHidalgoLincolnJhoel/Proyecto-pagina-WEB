@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TORI POLLERIA</title>
+  <meta name="description" content="TORI Pollería - El mejor pollo a la brasa de Miraflores. Promociones especiales, delivery y atención en salón. ¡Descubre nuestras deliciosas salsas MT!">
+  <title>TORI POLLERIA - El Mejor Pollo a la Brasa</title>
   <link rel="icon" type="image/x-icon" href="../IMG/icono.png" />
   <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../PrincipalCSS.css"/>
-   <!--No Usar-->
+  <link rel="stylesheet" href="../PrincipalCSS.css" />
+  <!--No Usar-->
   <!-- <link rel="stylesheet" href="../CSS/Principal.css"> -->
 </head>
 
@@ -19,88 +20,87 @@
       <a class="navbar-brand" href="#">
         <img src="../IMG/LOGO+2+ROJO.png" alt="Logo" width="90" height="auto" />
       </a>
-      
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><span class="LetraNegrita">NOSOTROS</span></a>
           </li>
           <!-- Button trigger modal -->
-<a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer;">¡POSTULA AQUÍ!</a>
+          <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            style="cursor:pointer;">🚀 ¡POSTULA AQUÍ!</a>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">FORMULARIO TORI</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Nombres</label>
-            <input type="text" class="form-control" id="recipient-name">
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">🚀 ¡ÚNETE AL EQUIPO TORI! 🍗</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="nombres" class="col-form-label">Nombres</label>
+                      <input type="text" class="form-control" id="nombres" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="apellidos" class="col-form-label">Apellidos</label>
+                      <input type="text" class="form-control" id="apellidos" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="edad" class="col-form-label">Edad</label>
+                      <input type="number" class="form-control" id="edad" min="18" max="65" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="dni" class="col-form-label">DNI</label>
+                      <input type="text" class="form-control" id="dni" pattern="[0-9]{8}" maxlength="8" required>
+                    </div>
+                    <div class="form-group col-md-9">
+                      <label for="puesto" class="col-form-label">Puesto al que desea postular</label>
+                      <select class="form-select" id="puesto" required>
+                        <option value="">Selecciona un puesto...</option>
+                        <option value="Mesero">Mesero</option>
+                        <option value="Cocinero">Cocinero</option>
+                        <option value="Conserje">Conserje</option>
+                        <option value="Seguridad">Seguridad</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Enviar datos</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Apellidos</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Edad</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group col-md-3"><label for="recipient-name" class="col-form-label">Puesto al que desea postular</label>
-            <select class="form-select" aria-label="default select example">
-              <option value="Mesero">Mesero</option>
-              <option value="Cocinero">Cocinero</option>
-              <option value="Conserje">Conserje</option>
-              <option value="Seguridad">Seguridad</option>
-            </select>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Enviar datos</button>
-      </div>
-    </div>
-  </div>
-</div>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-          <span class="LetraNegrita">PROMOS</span>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="LetraNegrita">PROMOS</span>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery"><span class="LetraNegrita">Carta Delivery</span></a></li>
-              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon"><span class="LetraNegrita">Carta Salon</span></a></li>
-              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery"><span class="LetraNegrita">Carta
+                    Delivery</span></a></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon"><span class="LetraNegrita">Carta
+                    Salon</span></a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
               <li><a class="dropdown-item" href="#"><span class="LetraNegrita">Ultimas Promociones</span></a></li>
             </ul>
           </li>
-          
+
         </ul>
-  
-        
-  
+
+
+
         <div class="d-flex align-items-center">
           <p class="mb-0 me-3"><b>¡BUSCANOS EN NUESTRAS REDES!</b></p>
           <a href="https://www.facebook.com/toripolleria/?locale=es_LA" class="me-2">
@@ -123,44 +123,44 @@
 
   <!-- Carrusel Bootstrap -->
   <div class="container-fluid px-0">
-  <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="ratio ratio-16x9">
+            <img src="../IMG/tori.jpg" class="d-block w-100 img-fluid" alt="Ambiente familiar" />
+          </div>
+          <div class="carousel-caption d-md-block"></div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9">
+            <img src="../IMG/Promo-pollo.png" class="d-block w-100 img-fluid" alt="Plato principal" />
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9">
+            <img src="../IMG/torii.jpg" class="d-block w-100 img-fluid" alt="Promoción especial" />
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="ratio ratio-16x9">
-          <img src="../IMG/tori.jpg" class="d-block w-100 img-fluid" alt="Ambiente familiar" />
-        </div>
-        <div class="carousel-caption d-md-block"></div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="ratio ratio-16x9">
-           <img src="../IMG/Promo-pollo.png" class="d-block w-100 img-fluid" alt="Plato principal" />
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="ratio ratio-16x9">
-          <img src="../IMG/torii.jpg" class="d-block w-100 img-fluid" alt="Promoción especial" />
-        </div>
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
   </div>
   <!-- Fin Carrusel -->
 
@@ -170,12 +170,11 @@
       <img src="../IMG/TRES+PLATOS.webp" class="img-fluid rounded" alt="Platos TORI" />
     </div>
 
-    <h5 class="text-danger fw-bold mb-2">
-      DESCUBRE TODO LO QUE TENEMOS PARA TI:
-    </h5>
-    <p>
-      Pollo a la brasa, papas fritas, chaufita, nuestras ensaladas, las ya
-      famosas salsas MT y mucho más.
+    <h3 class="text-danger fw-bold mb-3">
+      🍗✨ DESCUBRE TODO LO QUE TENEMOS PARA TI ✨🍗
+    </h3>
+    <p class="lead">
+      El mejor pollo a la brasa 🔥, papas fritas doraditas 🍟, chaufa delicioso 🍚, ensaladas frescas 🥗 y nuestras ya famosas salsas MT 🌶️ ¡y mucho más!
     </p>
 
     <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
@@ -188,105 +187,151 @@
   <div class="banner-imagen-principal">
     <img src="../IMG/edit+mesa+familia+cenital+manos.jpg" alt="Banner principal" class="img-fluid w-100" />
   </div>
+  <br>
   <!-- Fin seccion entre carousel y cards-->
-  <!--Cards-->
 
- <div class="container-fluid my-5">
-  <div class="d-flex justify-content-center align-items-stretch gap-3 flex-wrap">
-        <!--Card1-->
-  <div class="card text-start cardColor cardAnimacion" style="width: 40%;">
-        <img src="../IMG/card1.webp" class="card-img" alt="card1IMG">
-        <div class="card-body"><h2 class="text-danger fw-bold mb-2">POLLITO CON PAPAS</h2>
-        <p>1 Pollo TOri + papas + salsas mt (2 la brava + 2 la mayo)</p>
-        <p>*Válido solo para llevar</p>
-    <p><span class="text-decoration-line-through">*Antes S/71.90</span></p>
-     <h2>S/64.90</h2>
+  <!-- Sección de Promociones -->
+  <section id="promociones" class="py-4">
+    <!-- Título de promociones -->
+    <div class="container text-center py-4">
+      <h2 class="text-danger fw-bold mb-3">🔥 ¡CHECA NUESTRAS PROMOCIONES! 🔥</h2>
+      <h4 class="text-warning fw-bold mb-4">🍗 ¡No te lo pierdas! 🎉</h4>
+    </div>
+
+    <!--Cards-->
+    <div class="container-fluid my-5">
+    <div class="row justify-content-center g-4">
+      <!--Card1-->
+      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
+          <img src="../IMG/card1.webp" class="card-img" alt="card1IMG">
+          <div class="card-body">
+            <h2 class="text-danger fw-bold mb-2">🍗🍟 POLLITO CON PAPAS</h2>
+            <p>1 Pollo TOri + papas + salsas mt (2 la brava + 2 la mayo)</p>
+            <p>*Válido solo para llevar</p>
+            <p><span class="text-decoration-line-through">*Antes S/71.90</span></p>
+            <h2>S/64.90</h2>
+          </div>
         </div>
       </div>
 
       <!--Card2-->
-  <div class="card text-start cardColor cardAnimacion" style="width: 40%;">
-        <img src="../IMG/card2.webp" class="card-img" alt="card1IMG">
-        <div class="card-body"><h2 class="text-danger fw-bold mb-2">BANQUEROTI</h2>
-        <p>1 pollo TORI + papas + chaufa de guarnición + ensalada + gaseosa 1.5 lt + salsas ( 2 La brava + 2 la mayo + 2 la vinagreta + *Opcional 1 La Huacatay). </p>
-   <p><span class="text-decoration-line-through">*antes S/120.60</span></p>
-     <h2>S/95.90</h2>
+      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
+          <img src="../IMG/card2.webp" class="card-img" alt="card1IMG">
+          <div class="card-body">
+            <h2 class="text-danger fw-bold mb-2">🎉💥 BANQUEROTI 💥🎉</h2>
+            <p>1 pollo TORI + papas + chaufa de guarnición + ensalada + gaseosa 1.5 lt + salsas ( 2 La brava + 2 la mayo
+              +
+              2 la vinagreta + *Opcional 1 La Huacatay). </p>
+            <p><span class="text-decoration-line-through">*antes S/120.60</span></p>
+            <h2>S/95.90</h2>
+          </div>
         </div>
-      </div>  
-  </div>
- </div>
+      </div>
 
- <div class="container-fluid my-5">
-  <div class="d-flex justify-content-center align-items-stretch gap-3 flex-wrap">
-
-        <!--Card3-->
-  <div class="card text-start cardColor cardAnimacion" style="width: 40%;">
-        <img src="../IMG/card3.webp" class="card-img" alt="card1IMG">
-        <div class="card-body"><h2 class="text-danger fw-bold mb-2">1/2 COMBO TORI BRASA</h2>
-        <p>1/2 pollo TORI + papas + ensalada + 2 gaseosas 500 ml + salsas (2 La Brava + 1 La Mayo + 1 La Vinagreta).</p>
-   <p><span class="text-decoration-line-through">*antes S/74.80</span></p>
-     <h2>S/ 52.90 </h2>
+      <!--Card3-->
+      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
+          <img src="../IMG/card3.webp" class="card-img" alt="card1IMG">
+          <div class="card-body">
+            <h2 class="text-danger fw-bold mb-2">🥤🍗 1/2 COMBO TORI BRASA</h2>
+            <p>1/2 pollo TORI + papas + ensalada + 2 gaseosas 500 ml + salsas (2 La Brava + 1 La Mayo + 1 La Vinagreta).
+            </p>
+            <p><span class="text-decoration-line-through">*antes S/74.80</span></p>
+            <h2>S/ 52.90 </h2>
+          </div>
         </div>
       </div>
 
       <!--Card4-->
-      <div class="card text-start cardColor cardAnimacion" style="width: 40%;">
-        <img src="../IMG/card4.webp" class="card-img" alt="card1IMG">
-        <div class="card-body"><h2 class="text-danger fw-bold mb-2">PROMO SANGUCHAZO</h2>
-        <p>01 sanguchazo de Pollo + 01 gaseosa 500 ml.</p>
-   <p><span class="text-decoration-line-through">*antes S/32.40</span></p>
-     <h2>S/ 25.90</h2>
+      <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+        <div class="card text-start cardColor cardAnimacion" style="width: 100%; max-width: 300px;">
+          <img src="../IMG/card4.webp" class="card-img" alt="card1IMG">
+          <div class="card-body">
+            <h2 class="text-danger fw-bold mb-2">🥪⚡ PROMO SANGUCHAZO</h2>
+            <p>01 sanguchazo de Pollo + 01 gaseosa 500 ml.</p>
+            <p><span class="text-decoration-line-through">*antes S/32.40</span></p>
+            <h2>S/ 25.90</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
- </div>
- 
-  
-  
-  
+    </div>
+  </section>
   <!-- Fin Cards-->
 
 
   <!-- Footer -->
-  <footer class="bg-body-tertiary"> 
-  <div class="container">
-    <div class="d-flex justify-content-center flex-wrap gap-4">
-     <div class="container">
-     </div>
-      <div class="cards--">
-        <div class="card-body">
-          <p class="card-text" style="font-weight: bold;">ATENCION EN SALON:</p>
-          <p>LUNES A DOMINGOS DE 12:00 P.M. A 10:30 P.M.</p>
-          <p class="card-text" style="font-weight: bold;">ATENCION DELIVERY:</p>
-          <p>LUNES A DOMINGOS DE 11:30 A.M. A 10:00 P.M. </p>
-          <p class="card-text" style="font-weight: bold;"> DIRECCIÓN:</p>
-          <p> C. JOSÉ GÁLVEZ 390, MIRAFLORES.</p>
-        </div>
-      </div>
-      <div class="cards--">
-        <div class="card-body">
-         <ul>
-          <p><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">POLÍTICA DE PRIVACIDAD</a>
-        </p>
-        <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">POLÍTICA DE COOKIES</a></p>
-        <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">TEL.986 592 177</a></p>
-        <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">LIBRO DE RECLAMACIONES</a>
-        </p><img src="../IMG/libro.jpg" class="d-block mx-auto AumentarImagenLibro" alt="Libro de Reclamaciones" />
-         </ul>
-        </div>
-      </div>
-    </div>
+  <footer class="bg-body-tertiary">
     <div class="container">
-      <p class="text-center fs-5">
-        © 2025 TORI POLLERIA. Todos los derechos reservados.
-      </p>
+      <div class="d-flex justify-content-center flex-wrap gap-4">
+        <div class="container">
+        </div>
+        <div class="cards--">
+          <div class="card-body">
+            <p class="card-text" style="font-weight: bold;">🏪 ATENCIÓN EN SALÓN:</p>
+            <p>LUNES A DOMINGOS DE 12:00 P.M. A 10:30 P.M.</p>
+            <p class="card-text" style="font-weight: bold;">🛵 ATENCIÓN DELIVERY:</p>
+            <p>LUNES A DOMINGOS DE 11:30 A.M. A 10:00 P.M.</p>
+            <p class="card-text" style="font-weight: bold;">📍 DIRECCIÓN:</p>
+            <p>C. JOSÉ GÁLVEZ 390, MIRAFLORES</p>
+          </div>
+        </div>
+        <div class="cards--">
+          <div class="card-body">
+            <ul>
+              <p><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">🔒 POLÍTICA DE PRIVACIDAD</a>
+              </p>
+              <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">🍪 POLÍTICA DE
+                  COOKIES</a></p>
+              <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">📞 TEL. 986 592
+                  177</a></p>
+              <p class="card-text"><a class="NoColorEnlaces CambiarColor" href="#" style="font-weight: bold">📋 LIBRO DE
+                  RECLAMACIONES</a>
+              </p><img src="../IMG/libro.jpg" class="d-block mx-auto AumentarImagenLibro"
+                alt="Libro de Reclamaciones" />
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <p class="text-center fs-5">
+          © 2025 TORI POLLERIA. Todos los derechos reservados.
+        </p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
   <!-- fin footer-->
-  <!-- ...código existente... -->
+  
+  <!-- Botón Volver Arriba -->
+  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top" 
+          style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000; border-radius: 50%; width: 50px; height: 50px;">
+    ↑
+  </button>
+
+  <!-- Scripts -->
   <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-  <!-- ...código existente... -->
+  <script>
+    // Botón volver arriba
+    let mybutton = document.getElementById("btn-back-to-top");
+    
+    window.onscroll = function () {
+      scrollFunction();
+    };
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    mybutton.addEventListener("click", function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
 </body>
+
 </html>
