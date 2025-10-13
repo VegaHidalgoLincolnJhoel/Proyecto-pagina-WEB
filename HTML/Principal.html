@@ -284,52 +284,161 @@
     <div class="container-fluid my-5">
     <div class="cards-grid-container">
       <!--Card1 - Grid Item-->
-      <div class="card text-start cardColor cardAnimacion grid-card">
+      <div class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard1">
         <img src="../IMG/card1.webp" class="card-img" alt="card1IMG">
         <div class="card-body d-flex flex-column">
           <h2 class="text-danger fw-bold mb-2">🍗🍟 POLLITO CON PAPAS</h2>
-          <p class="flex-grow-1">1 Pollo TOri + papas + salsas mt (2 la brava + 2 la mayo)</p>
+          <p class="flex-grow-1">1 Pollo TORI + papas + salsas mt (2 la brava + 2 la mayo)</p>
           <p>*Válido solo para llevar</p>
           <p><span class="text-decoration-line-through">*Antes S/71.90</span></p>
           <h2 class="mt-auto">S/64.90</h2>
         </div>
       </div>
 
+      <!-- MODAL Card 1 -->
+<div class="modal fade" id="modalCard1" tabindex="-1" aria-labelledby="modalCard1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCard1Label">🍗🍟 POLLITO CON PAPAS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>1 Pollo TORI + papas + 2 La Brava + 2 La Mayo.</p>
+        <p class="text-muted">Solo válido para llevar.</p>
+        <p>Antes: <del>S/71.90</del></p>
+        <h4 class="text-danger">S/64.90</h4>
+
+        <!-- Cantidad -->
+        <div class="mt-3">
+          <label for="cantidadCard1" class="form-label fw-bold">Cantidad de promociones:</label>
+          <input type="number" id="cantidadCard1" name="cantidadCard1" class="form-control" value="1" min="1" max="10">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
       <!--Card2 - Grid Item-->
-      <div class="card text-start cardColor cardAnimacion grid-card">
+      <div class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard2">
         <img src="../IMG/card2.webp" class="card-img" alt="card2IMG">
         <div class="card-body d-flex flex-column">
           <h2 class="text-danger fw-bold mb-2">🎉💥 BANQUEROTI 💥🎉</h2>
-          <p class="flex-grow-1">1 pollo TORI + papas + chaufa de guarnición + ensalada + gaseosa 1.5 lt + salsas ( 2 La brava + 2 la mayo + 2 la vinagreta + *Opcional 1 La Huacatay). </p>
+          <p class="flex-grow-1">1 pollo TORI + papas + chaufa + ensalada + gaseosa + salsas.</p>
           <p><span class="text-decoration-line-through">*antes S/120.60</span></p>
           <h2 class="mt-auto">S/95.90</h2>
         </div>
       </div>
 
+      <!-- MODAL Card 2 -->
+<div class="modal fade" id="modalCard2" tabindex="-1" aria-labelledby="modalCard2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCard2Label">🎉💥 BANQUEROTI</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>1 Pollo TORI + papas + chaufa + ensalada + gaseosa 1.5L + 6 salsas (Brava, Mayo, Vinagreta, Huacatay).</p>
+        <p>Antes: <del>S/120.60</del></p>
+        <h4 class="text-danger">S/95.90</h4>
+
+        <!-- Cantidad -->
+        <div class="mt-3">
+          <label for="cantidadCard2" class="form-label fw-bold">Cantidad de promociones:</label>
+          <input type="number" id="cantidadCard2" name="cantidadCard2" class="form-control" value="1" min="1" max="10">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
       <!--Card3 - Grid Item-->
-      <div class="card text-start cardColor cardAnimacion grid-card">
+      <div class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard3">
         <img src="../IMG/card3.webp" class="card-img" alt="card3IMG">
         <div class="card-body d-flex flex-column">
           <h2 class="text-danger fw-bold mb-2">🥤🍗 1/2 COMBO TORI BRASA</h2>
-          <p class="flex-grow-1">1/2 pollo TORI + papas + ensalada + 2 gaseosas 500 ml + salsas (2 La Brava + 1 La Mayo + 1 La Vinagreta).</p>
+          <p class="flex-grow-1">1/2 pollo + papas + ensalada + 2 gaseosas + salsas.</p>
           <p><span class="text-decoration-line-through">*antes S/74.80</span></p>
-          <h2 class="mt-auto">S/ 52.90</h2>
+          <h2 class="mt-auto">S/52.90</h2>
         </div>
       </div>
 
+      <!-- MODAL Card 3 -->
+<div class="modal fade" id="modalCard3" tabindex="-1" aria-labelledby="modalCard3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCard3Label">🥤🍗 1/2 COMBO TORI BRASA</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>1/2 Pollo TORI + papas + ensalada + 2 gaseosas + 4 salsas (Brava, Mayo, Vinagreta).</p>
+        <p>Antes: <del>S/74.80</del></p>
+        <h4 class="text-danger">S/52.90</h4>
+
+        <!-- Cantidad -->
+        <div class="mt-3">
+          <label for="cantidadCard3" class="form-label fw-bold">Cantidad de promociones:</label>
+          <input type="number" id="cantidadCard3" name="cantidadCard3" class="form-control" value="1" min="1" max="10">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
       <!--Card4 - Grid Item-->
-      <div class="card text-start cardColor cardAnimacion grid-card">
+     <div class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard4">
         <img src="../IMG/card4.webp" class="card-img" alt="card4IMG">
         <div class="card-body d-flex flex-column">
           <h2 class="text-danger fw-bold mb-2">🥪⚡ PROMO SANGUCHAZO</h2>
-          <p class="flex-grow-1">01 sanguchazo de Pollo + 01 gaseosa 500 ml.</p>
+          <p class="flex-grow-1">1 Sanguchazo de Pollo + 1 gaseosa 500 ml.</p>
           <p><span class="text-decoration-line-through">*antes S/32.40</span></p>
-          <h2 class="mt-auto">S/ 25.90</h2>
+          <h2 class="mt-auto">S/25.90</h2>
         </div>
       </div>
     </div>
   </section>
-  <!-- Fin Cards-->
+
+  <!-- MODAL Card 4 -->
+<div class="modal fade" id="modalCard4" tabindex="-1" aria-labelledby="modalCard4Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCard4Label">🥪⚡ PROMO SANGUCHAZO</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>1 Sanguchazo de Pollo + 1 gaseosa 500 ml.</p>
+        <p>Antes: <del>S/32.40</del></p>
+        <h4 class="text-danger">S/25.90</h4>
+
+        <!-- Cantidad -->
+        <div class="mt-3">
+          <label for="cantidadCard4" class="form-label fw-bold">Cantidad de promociones:</label>
+          <input type="number" id="cantidadCard4" name="cantidadCard4" class="form-control" value="1" min="1" max="10">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>  
+  <!-- Fin Cards con modal-->
 
 
   <!-- Footer con Flexbox Layout -->
