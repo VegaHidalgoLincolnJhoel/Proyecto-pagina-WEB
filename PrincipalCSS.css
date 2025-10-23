@@ -46,11 +46,14 @@
     color:rgb(0, 0, 0)
 }
 
-.AumentarImagenLibro{
-    height: 60px;
-    transition: 0.15s linear;
+
+.AumentarImagenLibro {
+  display: inline-block;            
+  transition: transform 0.15s linear; 
+  transform-origin: center center;  
+  will-change: transform;
 }
 
-.AumentarImagenLibro:hover{
-   height: 70px;
+.AumentarImagenLibro:hover {
+  transform: scale(1.1667); 
 }
