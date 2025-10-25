@@ -7,117 +7,19 @@
   <meta name="description" content="TORI Pollería - El mejor pollo a la brasa de Miraflores. Promociones especiales, delivery y atención en salón. ¡Descubre nuestras deliciosas salsas MT!">
   <title>TORI POLLERIA - El Mejor Pollo a la Brasa</title>
   <link rel="icon" type="image/x-icon" href="../IMG/icono.png" />
+  <!-- Open Graph / Social preview -->
+  <meta property="og:title" content="TORI POLLERIA - El Mejor Pollo a la Brasa" />
+  <meta property="og:description" content="El mejor pollo a la brasa en Miraflores. Promociones, delivery y atención en salón." />
+  <meta property="og:image" content="../IMsG/tori.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TORI POLLERIA - El Mejor Pollo a la Brasa" />
+  <meta name="twitter:description" content="El mejor pollo a la brasa en Miraflores. Promociones, delivery y atención en salón." />
   <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../PrincipalCSS.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   
-  <!-- CSS Grid y Flexbox personalizado -->
-  <style>
-    /* CSS Grid Layout para las Cards */
-    .cards-grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    
-    /* Grid Items (Cards) */
-.grid-card {
-  border-radius: 12px; /* ajusta el radio a tu gusto */
-  overflow: hidden;    /* fundamental: recorta la imagen/hijos a las esquinas redondeadas */
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Mantén tu hover existente */
-.grid-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.grid-card .card-media {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background-color: #f0f0f0;
-}
-
-.grid-card .card-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  /* quita cualquier border-radius en la img para evitar inconsistencias */
-  border-radius: 0;
-  transition: transform 0.15s linear;
-  transform-origin: center center;
-}
-
-/* 4) Hover suave que agranda desde el centro sin afectar el layout */
-.grid-card:hover .card-media img {
-  transform: scale(1.05);
-}
-    
-    /* Flexbox dentro de cada card para alinear contenido */
-    .grid-card .card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1; /* reemplaza height:100% por flex:1 para que el contenido empuje correctamente */
-}
-    
-    .grid-card .flex-grow-1 {
-      flex-grow: 1;
-    }
-    
-    .grid-card .mt-auto {
-      margin-top: auto;
-    }
-    
-    /* Responsive Grid */
-    @media (max-width: 768px) {
-      .cards-grid-container {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-        gap: 1.5rem;
-      }
-    }
-    
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .cards-grid-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    @media (min-width: 1025px) {
-      .cards-grid-container {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-    
-    /* Footer Flexbox Mejorado */
-    .footer-flex-container {
-      min-height: 200px;
-    }
-    
-    .footer-section {
-      min-width: 250px;
-    }
-    
-    @media (max-width: 768px) {
-      .footer-flex-container {
-        text-align: center;
-      }
-      
-      .footer-section {
-        min-width: 100%;
-      }
-    }
-  </style>
+  <!-- Styles moved to ../PrincipalCSS.css -->
   
   <!--No Usar-->
   <!-- <link rel="stylesheet" href="../CSS/Principal.css"> -->
@@ -139,7 +41,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span class="LetraNegrita">👥 NOSOTROS</span></a>
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#nosotrosModal"><span class="LetraNegrita">👥 NOSOTROS</span></a>
           </li>
           <!-- Button trigger modal -->
           <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer;">
@@ -203,7 +105,122 @@
             </div>
           </div>
 
-          <li class="nav-item dropdown">
+              <!-- Modales adicionales: registerModal y loginModal (agregados) -->
+              <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <form id="registerForm" class="m-0">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">📝 Registrarse</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="regNombre" class="form-label">Nombre completo</label>
+                          <input type="text" class="form-control" id="regNombre" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="regEmail" class="form-label">Correo electrónico</label>
+                          <input type="email" class="form-control" id="regEmail" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="regPassword" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="regPassword" minlength="6" required>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <form id="loginForm" class="m-0">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">🔐 Iniciar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="loginEmail" class="form-label">Correo electrónico</label>
+                          <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="loginPassword" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-danger">Entrar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal NOSOTROS (información breve) -->
+              <div class="modal fade" id="nosotrosModal" tabindex="-1" aria-labelledby="nosotrosModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="nosotrosModalLabel">👥 Nosotros - TORI Pollería</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p><strong>TORI Pollería</strong> - El mejor pollo a la brasa de Miraflores. Ofrecemos promociones especiales, delivery y atención en salón. Nuestras salsas MT son un ícono de la casa.</p>
+                      <p class="mb-0"><strong>Horario:</strong> Atención en salón: 12:00 - 22:30 | Delivery: 11:30 - 22:00</p>
+                      <p class="mt-2 mb-0"><strong>Dirección:</strong> C. José Gálvez 390, Miraflores</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal Últimas Promociones (resumen) -->
+              <div class="modal fade" id="ultimasPromosModal" tabindex="-1" aria-labelledby="ultimasPromosModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="ultimasPromosModalLabel">🔥 Últimas Promociones</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <ul class="list-unstyled">
+                        <li class="mb-3">
+                          <h6 class="text-danger mb-1">🍗 Pollito con Papas — S/64.90</h6>
+                          <p class="mb-0">1 Pollo TORI + papas + salsas MT. Solo válido para llevar.</p>
+                        </li>
+                        <li class="mb-3">
+                          <h6 class="text-danger mb-1">🔥 Alitas BBQ — S/39.90</h6>
+                          <p class="mb-0">8 alitas BBQ + papas medianas + 2 salsas a elección.</p>
+                        </li>
+                        <li class="mb-3">
+                          <h6 class="text-danger mb-1">👨‍👩‍👧‍👦 Combo Familiar — S/99.90</h6>
+                          <p class="mb-0">2 pollos enteros + 2 guarniciones + 4 bebidas pequeñas.</p>
+                        </li>
+                        <li class="mb-0">
+                          <h6 class="text-danger mb-1">🍔 Hamburguesa Especial — S/29.90</h6>
+                          <p class="mb-0">Hamburguesa doble con queso, lechuga, tomate y papas pequeñas.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer" class="btn btn-danger">Ver en Delivery</a>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="LetraNegrita">PROMOS</span>
             </a>
@@ -215,7 +232,7 @@
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#"><span class="LetraNegrita">Ultimas Promociones</span></a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ultimasPromosModal"><span class="LetraNegrita">Ultimas Promociones</span></a></li>
             </ul>
           </li>
 
@@ -225,17 +242,17 @@
 
         <div class="d-flex align-items-center">
           <p class="mb-0 me-3"><b>¡BUSCANOS EN NUESTRAS REDES!</b></p>
-          <a href="https://www.facebook.com/toripolleria/?locale=es_LA" class="me-2">
-            <img src="../IMG/ICONO-FACEBOOK.png" width="20" height="20" alt="Facebook" />
+          <a href="https://www.facebook.com/toripolleria/?locale=es_LA" class="me-2 social-link" aria-label="Facebook - Tori Pollería" target="_blank" rel="noopener noreferrer">
+            <img src="../IMG/ICONO-FACEBOOK.png" width="24" height="24" alt="Facebook" />
           </a>
-          <a href="https://www.instagram.com/toripolleria/" class="me-2">
-            <img src="../IMG/ICONO-INSTAGRAM.png" width="20" height="20" alt="Instagram" />
+          <a href="https://www.instagram.com/toripolleria/" class="me-2 social-link" aria-label="Instagram - Tori Pollería" target="_blank" rel="noopener noreferrer">
+            <img src="../IMG/ICONO-INSTAGRAM.png" width="24" height="24" alt="Instagram" />
           </a>
-          <a href="https://www.tiktok.com/@toripolleriaoficial" class="me-2">
-            <img src="../IMG/ICONO-TIKTOK.jpg" width="20" height="20" alt="Tik Tok" />
+          <a href="https://www.tiktok.com/@toripolleriaoficial" class="me-2 social-link" aria-label="TikTok - Tori Pollería" target="_blank" rel="noopener noreferrer">
+            <img src="../IMG/ICONO-TIKTOK.jpg" width="24" height="24" alt="Tik Tok" />
           </a>
-          <a href="https://www.youtube.com/@ToriPolleria">
-            <img src="../IMG/youGpng.png" width="20" height="20" alt="Youtube" />
+          <a href="https://www.youtube.com/@ToriPolleria" class="social-link" aria-label="YouTube - Tori Pollería" target="_blank" rel="noopener noreferrer">
+            <img src="../IMG/youGpng.png" width="24" height="24" alt="Youtube" />
           </a>
         </div>
       </div>
@@ -256,20 +273,32 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="ratio ratio-16x9">
-            <img src="../IMG/tori.jpg" class="d-block w-100 img-fluid" alt="Ambiente familiar" />
+            <picture>
+              <!-- Imagen principal del carrusel -->
+              <source srcset="../IMG/tori.jpg" type="image/jpeg">
+              <img src="../IMG/tori.jpg" class="d-block w-100 img-fluid" alt="Ambiente familiar" loading="lazy" />
+            </picture>
           </div>
           <div class="carousel-caption d-md-block"></div>
         </div>
 
         <div class="carousel-item">
           <div class="ratio ratio-16x9">
-            <img src="../IMG/Promo-pollo.png" class="d-block w-100 img-fluid" alt="Plato principal" />
+            <picture>
+              <!-- Imagen promocional -->
+              <source srcset="../IMG/Promo-pollo.png" type="image/png">
+              <img src="../IMG/Promo-pollo.png" class="d-block w-100 img-fluid" alt="Plato principal" loading="lazy" />
+            </picture>
           </div>
         </div>
 
         <div class="carousel-item">
           <div class="ratio ratio-16x9">
-            <img src="../IMG/torii.jpg" class="d-block w-100 img-fluid" alt="Promoción especial" />
+            <picture>
+              <!-- Imagen de promoción -->
+              <source srcset="../IMG/torii.jpg" type="image/jpeg">
+              <img src="../IMG/torii.jpg" class="d-block w-100 img-fluid" alt="Promoción especial" loading="lazy" />
+            </picture>
           </div>
         </div>
       </div>
@@ -299,15 +328,19 @@
       El mejor pollo a la brasa 🔥, papas fritas doraditas 🍟, chaufa delicioso 🍚, ensaladas frescas 🥗 y nuestras ya famosas salsas MT 🌶️ ¡y mucho más!
     </p>
 
-    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
-      <a href="https://www.tori.pe/carta-delivery" target="_blank" class="btn btn-sm btn-outline-danger">Carta
+      <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+      <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-danger">Carta
         Delivery</a>
-      <a href="https://www.tori.pe/cartasalon" target="_blank" class="btn btn-sm btn-outline-danger">Carta Salón</a>
+      <a href="https://www.tori.pe/cartasalon" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-danger">Carta Salón</a>
     </div>
   </main>
 
   <div class="banner-imagen-principal">
-    <img src="../IMG/edit+mesa+familia+cenital+manos.jpg" alt="Banner principal" class="img-fluid w-100" />
+    <picture>
+      <!-- Banner principal (restaurado a la imagen original) -->
+      <source srcset="../IMG/edit+mesa+familia+cenital+manos.jpg" type="image/jpeg">
+      <img src="../IMG/edit+mesa+familia+cenital+manos.jpg" alt="Banner principal" class="img-fluid w-100" loading="lazy" />
+    </picture>
   </div>
   <br>
   <!-- Fin seccion entre carousel y cards-->
@@ -325,7 +358,7 @@
     <div class="cards-grid-container">
       <!--Card1 - Grid Item-->
 <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard1">
-  <div class="card-media">
+    <div class="card-media">
     <img src="../IMG/card1.webp" alt="Pollito con papas" loading="lazy">
   </div>
 
@@ -359,7 +392,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
@@ -368,7 +401,7 @@
 
       <!--Card2 - Grid Item-->
 <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard2">
-  <div class="card-media">
+    <div class="card-media">
     <img src="../IMG/card2.webp" alt="Alitas BBQ" loading="lazy">
   </div>
 
@@ -401,7 +434,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
@@ -410,7 +443,7 @@
 
       <!--Card3 - Grid Item-->
 <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard3">
-  <div class="card-media">
+    <div class="card-media">
     <img src="../IMG/card3.webp" alt="Combo Familiar" loading="lazy">
   </div>
 
@@ -443,7 +476,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
@@ -452,7 +485,7 @@
 
       <!--Card4 - Grid Item-->
 <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard4">
-  <div class="card-media">
+    <div class="card-media">
     <img src="../IMG/card4.webp" alt="Hamburguesa Especial" loading="lazy">
   </div>
 
@@ -488,13 +521,46 @@
         </div>
       </div>
       <div class="modal-footer">
-        <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger">Pedir Ahora</a>
+  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>  
   <!-- Fin Cards con modal-->
+
+  <!-- Modal CONTACTO (mailto - sin JS) -->
+  <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form action="mailto:contacto@tori.pe" method="post" enctype="text/plain" class="m-0">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactoModalLabel">✉️ Contáctanos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="contactNombre" class="form-label">Nombre</label>
+              <input type="text" id="contactNombre" name="Nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Correo electrónico</label>
+              <input type="email" id="contactEmail" name="Correo" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactMensaje" class="form-label">Mensaje</label>
+              <textarea id="contactMensaje" name="Mensaje" class="form-control" rows="4" required></textarea>
+            </div>
+            <p class="small text-muted mb-0">Este formulario abrirá tu cliente de correo para enviar el mensaje (mailto). Si prefieres, escríbenos a <a href="mailto:contacto@tori.pe">contacto@tori.pe</a>.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Footer con Flexbox Layout -->
@@ -523,13 +589,45 @@
             <a href="#" class="NoColorEnlaces CambiarColor text-decoration-none">🔒 Política de Privacidad</a>
             <a href="#" class="NoColorEnlaces CambiarColor text-decoration-none">🍪 Política de Cookies</a>
             <a href="tel:986592177" class="NoColorEnlaces CambiarColor text-decoration-none">📞 TEL. 986 592 177</a>
+            <!-- Newsletter removed by request -->
           </div>
         </div>
 
-        <!-- Columna 3: Libro de Reclamaciones -->
+        <!-- Columna 3: Libro de Reclamaciones y sección de Redes Sociales -->
         <div class="footer-section d-flex flex-column align-items-center">
           <h6 class="text-danger fw-bold mb-2">Libro de Reclamaciones</h6>
-          <img src="../IMG/libro.jpg" class="AumentarImagenLibro" alt="Libro de Reclamaciones" style="max-width: 80px;" />
+          <img src="../IMG/libro.jpg" class="AumentarImagenLibro" alt="Libro de Reclamaciones" style="max-width: 80px; width:80px; height:80px;" width="80" height="80" loading="lazy" />
+
+          <!-- Nueva sección: Redes sociales con icono + texto para reservar espacio y evitar agrupamiento visual -->
+          <div class="mt-3 footer-socials w-100 text-center">
+            <h6 class="text-danger fw-bold mb-2">Síguenos</h6>
+            <ul class="list-unstyled footer-social-list d-flex flex-column gap-2 mb-0">
+              <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
+                <a href="https://www.facebook.com/toripolleria/?locale=es_LA" aria-label="Facebook - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                  <img src="../IMG/ICONO-FACEBOOK.png" alt="Facebook" width="28" height="28" loading="lazy" />
+                  <span class="ms-2">Facebook</span>
+                </a>
+              </li>
+              <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
+                <a href="https://www.instagram.com/toripolleria/" aria-label="Instagram - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                  <img src="../IMG/ICONO-INSTAGRAM.png" alt="Instagram" width="28" height="28" loading="lazy" />
+                  <span class="ms-2">Instagram</span>
+                </a>
+              </li>
+              <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
+                <a href="https://www.tiktok.com/@toripolleriaoficial" aria-label="TikTok - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                  <img src="../IMG/ICONO-TIKTOK.jpg" alt="Tik Tok" width="28" height="28" loading="lazy" />
+                  <span class="ms-2">TikTok</span>
+                </a>
+              </li>
+              <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
+                <a href="https://www.youtube.com/@ToriPolleria" aria-label="YouTube - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                  <img src="../IMG/youGpng.png" alt="YouTube" width="28" height="28" loading="lazy" />
+                  <span class="ms-2">YouTube</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       
