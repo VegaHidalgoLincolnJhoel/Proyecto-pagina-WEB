@@ -8,8 +8,8 @@
 }
 
 .NoColorEnlaces{
-       color: inherit;
-       text-decoration: underline;
+    color: inherit;
+    text-decoration: underline;
 }
 
 .NoColorEnlaces:hover{
@@ -48,12 +48,12 @@
 
 
 .AumentarImagenLibro {
-  display: inline-block;            
-  transition: transform 0.15s linear; 
-  transform-origin: center center;  
-  will-change: transform;
+    display: inline-block;            
+    transition: transform 0.15s linear; 
+    transform-origin: center center;  
+    will-change: transform;
 }
 
 .AumentarImagenLibro:hover {
-  transform: scale(1.1667); 
+    transform: scale(1.1667); 
 }
