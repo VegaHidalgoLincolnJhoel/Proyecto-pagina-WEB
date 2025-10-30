@@ -67,7 +67,7 @@
                 </div>
                 
                 <div class="modal-body">
-                  <form>
+                  <form action="../PHP/guardar_postulacion.php" method="POST">
                     <div class="mb-3">
                       <label for="nombres" class="col-form-label">Nombres</label>
                       <input type="text" class="form-control" id="nombres" required>
@@ -109,7 +109,7 @@
               <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
-                    <form id="registerForm" class="m-0">
+                    <form action="../PHP/registrar_usuario.php" method="POST" id="registerForm" class="m-0">
                       <div class="modal-header">
                         <h5 class="modal-title" id="registerModalLabel">📝 Registrarse</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
@@ -140,7 +140,7 @@
               <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
-                    <form id="loginForm" class="m-0">
+                    <form action="../PHP/login.php" method="POST" id="loginForm" class="m-0">
                       <div class="modal-header">
                         <h5 class="modal-title" id="loginModalLabel">🔐 Iniciar sesión</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
