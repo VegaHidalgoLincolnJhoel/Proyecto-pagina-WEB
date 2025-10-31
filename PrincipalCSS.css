@@ -69,6 +69,34 @@ html,body{height:100%;background:var(--bg);font-family: 'Poppins', system-ui, -a
 .navbar .nav-link{padding:0.6rem 0.9rem;font-weight:600;color:#111}
 .navbar .nav-link:hover{opacity:0.92}
 
+/* Efecto hover sobre el texto: elevación solo de la palabra y sombra solo en el texto */
+.navbar .nav-link .nav-text{
+    display: inline-block; /* necesario para aplicar transform solo al texto */
+    transition: transform 0.22s cubic-bezier(.2,.9,.2,1), text-shadow 0.22s cubic-bezier(.2,.9,.2,1), opacity 0.12s ease;
+}
+.navbar .nav-link:hover .nav-text,
+.navbar .nav-link:focus .nav-text{
+    transform: translateY(-4px);
+    /* sombra más intensa y con múltiples capas para mayor profundidad */
+    text-shadow: 0 10px 28px rgba(13,20,30,0.18), 0 2px 6px rgba(13,20,30,0.10);
+    opacity: 1;
+}
+.navbar .nav-link:active .nav-text{
+    transform: translateY(0);
+}
+
+/* Hacer que el caret (flecha) del dropdown suba junto con el texto */
+.navbar .nav-link.dropdown-toggle::after{
+    display: inline-block; /* asegurar que soporte transform */
+    transition: transform 0.22s cubic-bezier(.2,.9,.2,1), opacity 0.18s ease;
+    /* mantener el mismo alineamiento que el texto */
+    vertical-align: middle;
+}
+.navbar .nav-link.dropdown-toggle:hover::after,
+.navbar .nav-link.dropdown-toggle:focus::after{
+    transform: translateY(-4px);
+}
+
 /* Carousel / Banner */
 .carousel .ratio { height: 60vh; min-height: 280px; }
 .carousel .ratio img, .carousel .ratio picture, .carousel .ratio picture img { width:100%; height:100%; display:block; object-fit:cover; }
@@ -165,6 +193,7 @@ footer .footer-flex-container{gap:2rem}
 
 /* Accessibility helpers */
 a:focus-visible, button:focus-visible {box-shadow: 0 0 0 3px var(--focus); border-radius:6px}
+
 
 @media (max-width: 576px){ .navbar .navbar-brand img{height:52px} .carousel .ratio{height:40vh} }
 
