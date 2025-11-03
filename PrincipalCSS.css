@@ -69,6 +69,20 @@ html,body{height:100%;background:var(--bg);font-family: 'Poppins', system-ui, -a
 .navbar .nav-link{padding:0.6rem 0.9rem;font-weight:600;color:#111}
 .navbar .nav-link:hover{opacity:0.92}
 
+/* Quitar fondo blanco de los íconos del navbar y hacerlos transparentes */
+.navbar .social-link img {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Forzar fondo igual al navbar para los íconos de redes sociales en el navbar */
+.navbar .social-link img {
+  background-color: #ffd000 !important;
+  border-radius: 6px;
+  /* Opcional: agrega un poco de padding para que el fondo se vea mejor */
+  padding: 2px;
+}
+
 /* Efecto hover sobre el texto: elevación solo de la palabra y sombra solo en el texto */
 .navbar .nav-link .nav-text{
     display: inline-block; /* necesario para aplicar transform solo al texto */
@@ -198,3 +212,13 @@ a:focus-visible, button:focus-visible {box-shadow: 0 0 0 3px var(--focus); borde
 @media (max-width: 576px){ .navbar .navbar-brand img{height:52px} .carousel .ratio{height:40vh} }
 
 /* End of Principal styles */
+
+/* --- Forzar transición de deslizamiento en el carrusel Bootstrap --- */
+.carousel-item {
+  transition: transform .6s ease-in-out !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item {
+    transition: transform .6s ease-in-out !important;
+  }
+}
