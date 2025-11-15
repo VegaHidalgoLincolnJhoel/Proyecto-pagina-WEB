@@ -112,12 +112,69 @@ html,body{height:100%;background:var(--bg);font-family: 'Poppins', system-ui, -a
 }
 
 /* Carousel / Banner */
-.carousel .ratio { height: 60vh; min-height: 280px; }
-.carousel .ratio img, .carousel .ratio picture, .carousel .ratio picture img { width:100%; height:100%; display:block; object-fit:cover; }
+.carousel .ratio { 
+    height: 500px; 
+    min-height: 400px; 
+}
 
-.banner-imagen-principal { max-height:50vh; overflow:hidden; position:relative; }
-.banner-imagen-principal img, .banner-imagen-principal picture, .banner-imagen-principal picture img { width:100%; height:100%; object-fit:cover; display:block; }
-.banner-imagen-principal::after{ content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.12));pointer-events:none; }
+.carousel-inner {
+    height: 500px; 
+}
+
+.carousel-item {
+    height: 500px; 
+}
+
+.carousel .ratio img, 
+.carousel .ratio picture, 
+.carousel .ratio picture img { 
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel .ratio,
+    .carousel-inner,
+    .carousel-item { 
+        height: 350px; 
+    }
+}
+
+/* Banner imagen principal - CORREGIDO */
+.banner-imagen-principal { 
+    max-height: 600px; 
+    min-height: 400px;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.banner-imagen-principal img, 
+.banner-imagen-principal picture, 
+.banner-imagen-principal picture img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center 48%;
+    display: block; 
+}
+
+.banner-imagen-principal::after{ 
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.12));
+    pointer-events:none; 
+}
+
+@media (max-width: 768px) {
+    .banner-imagen-principal { 
+        max-height: 300px;
+    }
+}
 
 /* Cards grid */
 .cards-grid-container {
