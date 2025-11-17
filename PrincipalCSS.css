@@ -213,6 +213,29 @@ a:focus-visible, button:focus-visible {box-shadow: 0 0 0 3px var(--focus); borde
         pointer-events: auto;
     }
 
+/* Responsive: centrar footer en pantallas pequeñas (móvil) */
+@media (max-width: 767.98px) {
+    /* Forzar centrado horizontal de las columnas del footer */
+    .footer-flex-container {
+        align-items: center !important;
+    }
+
+    /* Alinear el texto de cada sección al centro */
+    .footer-flex-container .footer-section {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Ajustes para la lista de redes y la imagen del libro */
+    .footer-socials { margin: 0 auto; }
+    .footer-social-list { display: flex; flex-direction: column; align-items: center; }
+    .footer-social-item { justify-content: center; }
+    .footer-section .AumentarImagenLibro { margin: 0 auto; display: block; }
+
+    /* Espaciado vertical entre secciones cuando están centradas */
+    .footer-flex-container > .footer-section { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+}
+
 
 
 
