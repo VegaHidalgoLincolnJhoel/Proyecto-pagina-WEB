@@ -83,7 +83,6 @@ html,body{height:100%;background:var(--bg);font-family: 'Poppins', system-ui, -a
   padding: 2px;
 }
 
-/* Efecto hover sobre el texto: elevación solo de la palabra y sombra solo en el texto */
 .navbar .nav-link .nav-text{
     display: inline-block; /* necesario para aplicar transform solo al texto */
     transition: transform 0.22s cubic-bezier(.2,.9,.2,1), text-shadow 0.22s cubic-bezier(.2,.9,.2,1), opacity 0.12s ease;
@@ -91,7 +90,6 @@ html,body{height:100%;background:var(--bg);font-family: 'Poppins', system-ui, -a
 .navbar .nav-link:hover .nav-text,
 .navbar .nav-link:focus .nav-text{
     transform: translateY(-4px);
-    /* sombra más intensa y con múltiples capas para mayor profundidad */
     text-shadow: 0 10px 28px rgba(13,20,30,0.18), 0 2px 6px rgba(13,20,30,0.10);
     opacity: 1;
 }
@@ -99,7 +97,6 @@ html,body{height:100%;background:var(--bg);font-family: 'Poppins', system-ui, -a
     transform: translateY(0);
 }
 
-/* Hacer que el caret (flecha) del dropdown suba junto con el texto */
 .navbar .nav-link.dropdown-toggle::after{
     display: inline-block; /* asegurar que soporte transform */
     transition: transform 0.22s cubic-bezier(.2,.9,.2,1), opacity 0.18s ease;
@@ -109,71 +106,6 @@ html,body{height:100%;background:var(--bg);font-family: 'Poppins', system-ui, -a
 .navbar .nav-link.dropdown-toggle:hover::after,
 .navbar .nav-link.dropdown-toggle:focus::after{
     transform: translateY(-4px);
-}
-
-/* Carousel / Banner */
-.carousel .ratio { 
-    height: 500px; 
-    min-height: 400px; 
-}
-
-.carousel-inner {
-    height: 500px; 
-}
-
-.carousel-item {
-    height: 500px; 
-}
-
-.carousel .ratio img, 
-.carousel .ratio picture, 
-.carousel .ratio picture img { 
-    width: 100%; 
-    height: 100%; 
-    display: block; 
-    object-fit: cover;
-    object-position: center center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .carousel .ratio,
-    .carousel-inner,
-    .carousel-item { 
-        height: 350px; 
-    }
-}
-
-/* Banner imagen principal - CORREGIDO */
-.banner-imagen-principal { 
-    max-height: 600px; 
-    min-height: 400px;
-    overflow: hidden; 
-    position: relative; 
-}
-
-.banner-imagen-principal img, 
-.banner-imagen-principal picture, 
-.banner-imagen-principal picture img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    object-position: center 48%;
-    display: block; 
-}
-
-.banner-imagen-principal::after{ 
-    content:'';
-    position:absolute;
-    inset:0;
-    background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.12));
-    pointer-events:none; 
-}
-
-@media (max-width: 768px) {
-    .banner-imagen-principal { 
-        max-height: 300px;
-    }
 }
 
 /* Cards grid */
@@ -248,8 +180,7 @@ footer .footer-flex-container{gap:2rem}
 .social-icons{display:flex;gap:0.6rem;align-items:center;justify-content:center}
 .social-icons a{display:inline-flex;align-items:center}
 
-/* Footer icon size fix: asegurar tamaño consistente para imágenes en el footer
-    (algunos iconos no usan la clase .social-link, por eso apuntamos a .social-icons img) */
+
 .social-icons img{width:28px;height:28px;object-fit:contain;border-radius:6px;display:block}
 .social-icons a:focus-visible img{box-shadow: 0 0 0 3px var(--focus); border-radius:6px}
 .social-icons a:hover img{transform:translateY(-3px) scale(1.04);filter:brightness(1.03)}
@@ -262,20 +193,29 @@ footer .footer-flex-container{gap:2rem}
 .footer-socials { max-width: 180px; margin: 0 auto; }
 .footer-socials h6 { font-size: 0.9rem; }
 
-/* Accessibility helpers */
 a:focus-visible, button:focus-visible {box-shadow: 0 0 0 3px var(--focus); border-radius:6px}
 
+#logo1,
+    .navbar-logo img {
+        max-width: 96px;
+    }
 
-@media (max-width: 576px){ .navbar .navbar-brand img{height:52px} .carousel .ratio{height:40vh} }
+    .navbar-logo {
+        top: 0;
+        bottom: auto;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;    }
 
-/* End of Principal styles */
+    .navbar-logo a,
+    .navbar-logo img {
+        pointer-events: auto;
+    }
 
-/* --- Forzar transición de deslizamiento en el carrusel Bootstrap --- */
-.carousel-item {
-  transition: transform .6s ease-in-out !important;
-}
-@media (prefers-reduced-motion: reduce) {
-  .carousel-item {
-    transition: transform .6s ease-in-out !important;
-  }
-}
+
+
+
+
+
+

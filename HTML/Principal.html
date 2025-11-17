@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -26,7 +26,7 @@
   <nav class="navbar navbar-expand-lg" style="background-color: #ffd000;" data-bs-theme="light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="../IMG/LOGO+2+ROJO.png" alt="Logo" width="90" height="auto" />
+        <img src="../IMG/LOGO+2+ROJO.png" alt="Logo TORI Pollería" width="90" height="auto" />
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -37,199 +37,201 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#nosotrosModal"><span class="LetraNegrita">👥 NOSOTROS</span></a>
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#nosotrosModal">
+              <span class="LetraNegrita">👥 NOSOTROS</span>
+            </a>
           </li>
-          <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer;">
-  🚀 ¡POSTULA AQUÍ!
-</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              🚀 ¡POSTULA AQUÍ!
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#registerModal">
+              REGISTRATE
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#loginModal">
+              INICIAR SESION
+            </a>
+          </li>
 
-<a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#registerModal" style="cursor:pointer;">
-  REGISTRATE
-</a>
-
-<a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#loginModal" style="cursor:pointer;">
-  INICIAR SESION
-</a>
-
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+          <!-- Modal Postular -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">🚀 ¡ÚNETE AL EQUIPO TORI! 🍗</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                
                 <div class="modal-body">
                   <form action="../PHP/guardar_postulacion.php" method="POST">
                     <div class="mb-3">
                       <label for="nombres" class="col-form-label">Nombres</label>
-                      <input type="text" class="form-control" id="nombres" required>
+                      <input type="text" class="form-control" id="nombres" name="nombres" required>
                     </div>
                     <div class="mb-3">
                       <label for="apellidos" class="col-form-label">Apellidos</label>
-                      <input type="text" class="form-control" id="apellidos" required>
+                      <input type="text" class="form-control" id="apellidos" name="apellidos" required>
                     </div>
                     <div class="mb-3">
                       <label for="edad" class="col-form-label">Edad</label>
-                      <input type="number" class="form-control" id="edad" min="18" max="65" required>
+                      <input type="number" class="form-control" id="edad" name="edad" min="18" max="65" required>
                     </div>
                     <div class="mb-3">
                       <label for="dni" class="col-form-label">DNI</label>
-                      <input type="text" class="form-control" id="dni" pattern="[0-9]{8}" maxlength="8" required>
+                      <input type="text" class="form-control" id="dni" name="dni" pattern="[0-9]{8}" maxlength="8" required>
                     </div>
-                    <div class="form-group col-md-9">
+                    <div class="mb-3">
                       <label for="puesto" class="col-form-label">Puesto al que desea postular</label>
-                      <select class="form-select" id="puesto" required>
+                      <select class="form-select" id="puesto" name="puesto" required>
                         <option value="">Selecciona un puesto...</option>
-                        <option value="Mesero">Mozo</option>
+                        <option value="Mozo">Mozo</option>
                         <option value="Cocinero">Cocinero</option>
                         <option value="Conserje">Conserje</option>
                         <option value="Seguridad">Seguridad</option>
                         <option value="Hornero">Hornero</option>
                       </select>
                     </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-primary">Enviar datos</button>
+                    </div>
                   </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Enviar datos</button>
                 </div>
               </div>
             </div>
           </div>
 
-              <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <form action="../PHP/registrar_usuario.php" method="POST" id="registerForm" class="m-0">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="registerModalLabel">📝 Registrarse</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="mb-3">
-                          <label for="regNombre" class="form-label">Nombre completo</label>
-                          <input type="text" class="form-control" id="regNombre" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="regEmail" class="form-label">Correo electrónico</label>
-                          <input type="email" class="form-control" id="regEmail" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="regPassword" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="regPassword" minlength="6" required>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary">Crear cuenta</button>
-                      </div>
-                    </form>
+          <!-- Modal Registro -->
+          <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <form action="../PHP/registrar_usuario.php" method="POST" id="registerForm" class="m-0">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">📝 Registrarse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                   </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="regNombre" class="form-label">Nombre completo</label>
+                      <input type="text" class="form-control" id="regNombre" name="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="regEmail" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="regEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="regPassword" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="regPassword" name="password" minlength="6" required>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Login -->
+          <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <form action="../PHP/login.php" method="POST" id="loginForm" class="m-0">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">🔐 Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="loginEmail" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="loginPassword" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="loginPassword" name="password" required>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-danger">Entrar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Nosotros -->
+          <div class="modal fade" id="nosotrosModal" tabindex="-1" aria-labelledby="nosotrosModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="nosotrosModalLabel">👥 Nosotros - TORI Pollería</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                  <p><strong>TORI Pollería</strong> - El mejor pollo a la brasa de Miraflores. Ofrecemos promociones especiales, delivery y atención en salón. Nuestras salsas MT son un ícono de la casa.</p>
+                  <p class="mb-0"><strong>Horario:</strong> Atención en salón: 12:00 - 22:30 | Delivery: 11:30 - 22:00</p>
+                  <p class="mt-2 mb-0"><strong>Dirección:</strong> C. José Gálvez 390, Miraflores</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <form action="../PHP/login.php" method="POST" id="loginForm" class="m-0">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">🔐 Iniciar sesión</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="mb-3">
-                          <label for="loginEmail" class="form-label">Correo electrónico</label>
-                          <input type="email" class="form-control" id="loginEmail" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="loginPassword" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="loginPassword" required>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-danger">Entrar</button>
-                      </div>
-                    </form>
-                  </div>
-                    </div>
-                  </div>
-
-                  <div class="modal fade" id="nosotrosModal" tabindex="-1" aria-labelledby="nosotrosModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="nosotrosModalLabel">👥 Nosotros - TORI Pollería</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p><strong>TORI Pollería</strong> - El mejor pollo a la brasa de Miraflores. Ofrecemos promociones especiales, delivery y atención en salón. Nuestras salsas MT son un ícono de la casa.</p>
-                      <p class="mb-0"><strong>Horario:</strong> Atención en salón: 12:00 - 22:30 | Delivery: 11:30 - 22:00</p>
-                      <p class="mt-2 mb-0"><strong>Dirección:</strong> C. José Gálvez 390, Miraflores</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                  </div>
+          <!-- Modal Promociones -->
+          <div class="modal fade" id="ultimasPromosModal" tabindex="-1" aria-labelledby="ultimasPromosModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ultimasPromosModalLabel">🔥 Últimas Promociones</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
+                <div class="modal-body">
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <h6 class="text-danger mb-1">🍗 Pollito con Papas — S/64.90</h6>
+                      <p class="mb-0">1 Pollo TORI + papas + salsas MT. Solo válido para llevar.</p>
+                    </li>
+                    <li class="mb-3">
+                      <h6 class="text-danger mb-1">🔥 Alitas BBQ — S/39.90</h6>
+                      <p class="mb-0">8 alitas BBQ + papas medianas + 2 salsas a elección.</p>
+                    </li>
+                    <li class="mb-3">
+                      <h6 class="text-danger mb-1">👨‍👩‍👧‍👦 Combo Familiar — S/99.90</h6>
+                      <p class="mb-0">2 pollos enteros + 2 guarniciones + 4 bebidas pequeñas.</p>
+                    </li>
+                    <li class="mb-0">
+                      <h6 class="text-danger mb-1">🍔 Hamburguesa Especial — S/29.90</h6>
+                      <p class="mb-0">Hamburguesa doble con queso, lechuga, tomate y papas pequeñas.</p>
+                    </li>
+                  </ul>
                 </div>
-
-                <div class="modal fade" id="ultimasPromosModal" tabindex="-1" aria-labelledby="ultimasPromosModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="ultimasPromosModalLabel">🔥 Últimas Promociones</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                      <ul class="list-unstyled">
-                        <li class="mb-3">
-                          <h6 class="text-danger mb-1">🍗 Pollito con Papas — S/64.90</h6>
-                          <p class="mb-0">1 Pollo TORI + papas + salsas MT. Solo válido para llevar.</p>
-                        </li>
-                        <li class="mb-3">
-                          <h6 class="text-danger mb-1">🔥 Alitas BBQ — S/39.90</h6>
-                          <p class="mb-0">8 alitas BBQ + papas medianas + 2 salsas a elección.</p>
-                        </li>
-                        <li class="mb-3">
-                          <h6 class="text-danger mb-1">👨‍👩‍👧‍👦 Combo Familiar — S/99.90</h6>
-                          <p class="mb-0">2 pollos enteros + 2 guarniciones + 4 bebidas pequeñas.</p>
-                        </li>
-                        <li class="mb-0">
-                          <h6 class="text-danger mb-1">🍔 Hamburguesa Especial — S/29.90</h6>
-                          <p class="mb-0">Hamburguesa doble con queso, lechuga, tomate y papas pequeñas.</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer" class="btn btn-danger">Ver en Delivery</a>
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                  </div>
+                <div class="modal-footer">
+                  <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer" class="btn btn-danger">Ver en Delivery</a>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="LetraNegrita">PROMOS</span>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery"><span class="LetraNegrita">Carta
-                    Delivery</span></a></li>
-              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon"><span class="LetraNegrita">Carta
-                    Salon</span></a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer"><span class="LetraNegrita">Carta Delivery</span></a></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon" target="_blank" rel="noopener noreferrer"><span class="LetraNegrita">Carta Salon</span></a></li>
+              <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ultimasPromosModal"><span class="LetraNegrita">Ultimas Promociones</span></a></li>
             </ul>
           </li>
-
         </ul>
-
-
 
         <div class="d-flex align-items-center">
           <p class="mb-0 me-3"><b>¡BUSCANOS EN NUESTRAS REDES!</b></p>
@@ -250,31 +252,28 @@
     </div>
   </nav>
 
+ <!-- Carousel -->
   <div class="container-fluid px-0">
     <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="ratio ratio-16x9">
+          <div class="carousel-img-container">
             <picture>
-              <!-- Imagen principal del carrusel -->
-              <source srcset="../IMG/toriii.png" type="image/jpeg">
+              <source srcset="../IMG/toriii.png" type="image/png">
               <img src="../IMG/tori.jpg" class="d-block w-100 carousel-img" alt="Ambiente familiar" loading="lazy" />
             </picture>
           </div>
-          <div class="carousel-caption d-md-block"></div>
         </div>
 
         <div class="carousel-item">
           <div class="carousel-img-container">
             <picture>
-              <!-- Imagen promocional -->
               <source srcset="../IMG/bannertori.png" type="image/png">
               <img src="../IMG/bannertori.png" class="d-block w-100 carousel-img" alt="Plato principal" loading="lazy" />
             </picture>
@@ -284,8 +283,7 @@
         <div class="carousel-item">
           <div class="carousel-img-container">
             <picture>
-              <!-- Imagen de promoción -->
-              <source srcset="../IMG/banners.png" type="image/jpeg">
+              <source srcset="../IMG/banners.png" type="image/png">
               <img src="../IMG/banners.png" class="d-block w-100 carousel-img" alt="Promoción especial" loading="lazy" />
             </picture>
           </div>
@@ -302,6 +300,7 @@
       </button>
     </div>
   </div>
+
 
   <!-- Sección entre carousel y cards -->
   <main class="container text-center py-4">
@@ -631,4 +630,3 @@
   <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
