@@ -4,21 +4,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TORI Pollería - El mejor pollo a la brasa de Miraflores. Promociones especiales, delivery y atención en salón. ¡Descubre nuestras deliciosas salsas MT!">
+  <meta name="description"
+    content="TORI Pollería - El mejor pollo a la brasa de Miraflores. Promociones especiales, delivery y atención en salón. ¡Descubre nuestras deliciosas salsas MT!">
   <title>TORI POLLERIA - El Mejor Pollo a la Brasa</title>
   <link rel="icon" type="image/x-icon" href="../IMG/icono.png" />
   <!-- Open Graph / Social preview -->
   <meta property="og:title" content="TORI POLLERIA - El Mejor Pollo a la Brasa" />
-  <meta property="og:description" content="El mejor pollo a la brasa en Miraflores. Promociones, delivery y atención en salón." />
+  <meta property="og:description"
+    content="El mejor pollo a la brasa en Miraflores. Promociones, delivery y atención en salón." />
   <meta property="og:image" content="../IMG/tori.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TORI POLLERIA - El Mejor Pollo a la Brasa" />
-  <meta name="twitter:description" content="El mejor pollo a la brasa en Miraflores. Promociones, delivery y atención en salón." />
+  <meta name="twitter:description"
+    content="El mejor pollo a la brasa en Miraflores. Promociones, delivery y atención en salón." />
   <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../PrincipalCSS.css" />
+  <link rel="stylesheet" href="../PrincipalCSS.css?v=20251124-1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -37,7 +40,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#nosotrosModal">
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+              data-bs-target="#nosotrosModal">
               <span class="LetraNegrita">👥 NOSOTROS</span>
             </a>
           </li>
@@ -47,18 +51,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#registerModal">
+            <a href="#" id="navRegisterBtn" class="nav-link active LetraNegrita" data-bs-toggle="modal"
+              data-bs-target="#registerModal">
               REGISTRATE
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link active LetraNegrita" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <a href="#" id="navLoginBtn" class="nav-link active LetraNegrita" data-bs-toggle="modal"
+              data-bs-target="#loginModal">
               INICIAR SESION
             </a>
           </li>
 
           <!-- Modal Postular -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -81,7 +88,8 @@
                     </div>
                     <div class="mb-3">
                       <label for="dni" class="col-form-label">DNI</label>
-                      <input type="text" class="form-control" id="dni" name="dni" pattern="[0-9]{8}" maxlength="8" required>
+                      <input type="text" class="form-control" id="dni" name="dni" pattern="[0-9]{8}" maxlength="8"
+                        required>
                     </div>
                     <div class="mb-3">
                       <label for="puesto" class="col-form-label">Puesto al que desea postular</label>
@@ -105,7 +113,8 @@
           </div>
 
           <!-- Modal Registro -->
-          <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+          <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <form action="../PHP/registrar_usuario.php" method="POST" id="registerForm" class="m-0">
@@ -124,7 +133,8 @@
                     </div>
                     <div class="mb-3">
                       <label for="regPassword" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" id="regPassword" name="password" minlength="6" required>
+                      <input type="password" class="form-control" id="regPassword" name="password" minlength="6"
+                        required>
                     </div>
                   </div>
                   <div class="modal-footer">
@@ -165,7 +175,8 @@
           </div>
 
           <!-- Modal Nosotros -->
-          <div class="modal fade" id="nosotrosModal" tabindex="-1" aria-labelledby="nosotrosModalLabel" aria-hidden="true">
+          <div class="modal fade" id="nosotrosModal" tabindex="-1" aria-labelledby="nosotrosModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
@@ -173,8 +184,10 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                  <p><strong>TORI Pollería</strong> - El mejor pollo a la brasa de Miraflores. Ofrecemos promociones especiales, delivery y atención en salón. Nuestras salsas MT son un ícono de la casa.</p>
-                  <p class="mb-0"><strong>Horario:</strong> Atención en salón: 12:00 - 22:30 | Delivery: 11:30 - 22:00</p>
+                  <p><strong>TORI Pollería</strong> - El mejor pollo a la brasa de Miraflores. Ofrecemos promociones
+                    especiales, delivery y atención en salón. Nuestras salsas MT son un ícono de la casa.</p>
+                  <p class="mb-0"><strong>Horario:</strong> Atención en salón: 12:00 - 22:30 | Delivery: 11:30 - 22:00
+                  </p>
                   <p class="mt-2 mb-0"><strong>Dirección:</strong> C. José Gálvez 390, Miraflores</p>
                 </div>
                 <div class="modal-footer">
@@ -185,7 +198,8 @@
           </div>
 
           <!-- Modal Promociones -->
-          <div class="modal fade" id="ultimasPromosModal" tabindex="-1" aria-labelledby="ultimasPromosModalLabel" aria-hidden="true">
+          <div class="modal fade" id="ultimasPromosModal" tabindex="-1" aria-labelledby="ultimasPromosModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -207,13 +221,14 @@
                       <p class="mb-0">2 pollos enteros + 2 guarniciones + 4 bebidas pequeñas.</p>
                     </li>
                     <li class="mb-0">
-                      <h6 class="text-danger mb-1">🍔 Hamburguesa Especial — S/29.90</h6>
+                      <h6 class="text-danger mb-1"> Hamburguesa Especial — S/29.90</h6>
                       <p class="mb-0">Hamburguesa doble con queso, lechuga, tomate y papas pequeñas.</p>
                     </li>
                   </ul>
                 </div>
                 <div class="modal-footer">
-                  <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer" class="btn btn-danger">Ver en Delivery</a>
+                  <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-danger">Ver en Delivery</a>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
               </div>
@@ -225,38 +240,66 @@
               <span class="LetraNegrita">PROMOS</span>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer"><span class="LetraNegrita">Carta Delivery</span></a></li>
-              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon" target="_blank" rel="noopener noreferrer"><span class="LetraNegrita">Carta Salon</span></a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ultimasPromosModal"><span class="LetraNegrita">Ultimas Promociones</span></a></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/carta-delivery" target="_blank"
+                  rel="noopener noreferrer"><span class="LetraNegrita">Carta Delivery</span></a></li>
+              <li><a class="dropdown-item" href="https://www.tori.pe/cartasalon" target="_blank"
+                  rel="noopener noreferrer"><span class="LetraNegrita">Carta Salon</span></a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ultimasPromosModal"><span
+                    class="LetraNegrita">Ultimas Promociones</span></a></li>
             </ul>
           </li>
         </ul>
 
         <div class="d-flex align-items-center">
           <p class="mb-0 me-3"><b>¡BUSCANOS EN NUESTRAS REDES!</b></p>
-          <a href="https://www.facebook.com/toripolleria/?locale=es_LA" class="me-2 social-link" aria-label="Facebook - Tori Pollería" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/toripolleria/?locale=es_LA" class="me-2 social-link"
+            aria-label="Facebook - Tori Pollería" target="_blank" rel="noopener noreferrer">
             <img src="../IMG/ICONO-FACEBOOK.png" width="24" height="24" alt="Facebook" />
           </a>
-          <a href="https://www.instagram.com/toripolleria/" class="me-2 social-link" aria-label="Instagram - Tori Pollería" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/toripolleria/" class="me-2 social-link"
+            aria-label="Instagram - Tori Pollería" target="_blank" rel="noopener noreferrer">
             <img src="../IMG/ICONO-INSTAGRAM.png" width="24" height="24" alt="Instagram" />
           </a>
-          <a href="https://www.tiktok.com/@toripolleriaoficial" class="me-2 social-link" aria-label="TikTok - Tori Pollería" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@toripolleriaoficial" class="me-2 social-link"
+            aria-label="TikTok - Tori Pollería" target="_blank" rel="noopener noreferrer">
             <img src="../IMG/ICONO-TIKTOK.png" width="24" height="24" alt="Tik Tok" />
           </a>
-          <a href="https://www.youtube.com/@ToriPolleria" class="social-link" aria-label="YouTube - Tori Pollería" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@ToriPolleria" class="social-link" aria-label="YouTube - Tori Pollería"
+            target="_blank" rel="noopener noreferrer">
             <img src="../IMG/youGpng.png" width="24" height="24" alt="Youtube" />
           </a>
+
+          <!-- Perfil de usuario: oculto por defecto y mostrado tras login exitoso -->
+          <div id="navUser" class="dropdown d-none ms-3">
+            <a class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center" href="#" role="button"
+              id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="navUserAvatar"
+                class="rounded-circle bg-white d-inline-flex align-items-center justify-content-center me-2"
+                style="width:32px;height:32px;">U</span>
+              <span id="navUserName">Usuario</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#" id="logoutLink">Cerrar sesión</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </nav>
 
- <!-- Carousel -->
+  <!-- Carousel -->
   <div class="container-fluid px-0">
     <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
@@ -275,7 +318,8 @@
           <div class="carousel-img-container">
             <picture>
               <source srcset="../IMG/bannertori.png" type="image/png">
-              <img src="../IMG/bannertori.png" class="d-block w-100 carousel-img" alt="Plato principal" loading="lazy" />
+              <img src="../IMG/bannertori.png" class="d-block w-100 carousel-img" alt="Plato principal"
+                loading="lazy" />
             </picture>
           </div>
         </div>
@@ -284,7 +328,8 @@
           <div class="carousel-img-container">
             <picture>
               <source srcset="../IMG/banners.png" type="image/png">
-              <img src="../IMG/banners.png" class="d-block w-100 carousel-img" alt="Promoción especial" loading="lazy" />
+              <img src="../IMG/banners.png" class="d-block w-100 carousel-img" alt="Promoción especial"
+                loading="lazy" />
             </picture>
           </div>
         </div>
@@ -312,13 +357,16 @@
       🍗✨ DESCUBRE TODO LO QUE TENEMOS PARA TI ✨🍗
     </h3>
     <p class="lead">
-      El mejor pollo a la brasa 🔥, papas fritas doraditas 🍟, chaufa delicioso 🍚, ensaladas frescas 🥗 y nuestras ya famosas salsas MT 🌶️ ¡y mucho más!
+      El mejor pollo a la brasa 🔥, papas fritas doraditas 🍟, chaufa delicioso 🍚, ensaladas frescas 🥗 y nuestras ya
+      famosas salsas MT 🌶️ ¡y mucho más!
     </p>
 
-      <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
-      <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-danger">Carta
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+      <a href="https://www.tori.pe/carta-delivery" target="_blank" rel="noopener noreferrer"
+        class="btn btn-sm btn-outline-danger">Carta
         Delivery</a>
-      <a href="https://www.tori.pe/cartasalon" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-danger">Carta Salón</a>
+      <a href="https://www.tori.pe/cartasalon" target="_blank" rel="noopener noreferrer"
+        class="btn btn-sm btn-outline-danger">Carta Salón</a>
     </div>
   </main>
 
@@ -326,7 +374,8 @@
     <picture>
       <!-- Banner principal (restaurado a la imagen original) -->
       <source srcset="../IMG/edit+mesa+familia+cenital+manos.jpg" type="image/jpeg">
-      <img src="../IMG/edit+mesa+familia+cenital+manos.jpg" alt="Banner principal" class="img-fluid w-100" loading="lazy" />
+      <img src="../IMG/edit+mesa+familia+cenital+manos.jpg" alt="Banner principal" class="img-fluid w-100"
+        loading="lazy" />
     </picture>
   </div>
   <br>
@@ -341,178 +390,187 @@
 
     <!--Cards con CSS Grid Layout-->
     <div class="container-fluid my-5">
-    <div class="cards-grid-container">
-      <!--Card1 - Grid Item-->
-<article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard1">
-    <div class="card-media">
-    <img src="../IMG/card1.webp" alt="Pollito con papas" loading="lazy">
-  </div>
+      <div class="cards-grid-container">
+        <!--Card1 - Grid Item-->
+        <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;"
+          data-bs-toggle="modal" data-bs-target="#modalCard1">
+          <div class="card-media">
+            <img src="../IMG/card1.webp" alt="Pollito con papas" loading="lazy">
+          </div>
 
-  <div class="card-body d-flex flex-column">
-    <h2 class="text-danger fw-bold mb-2">🍗🍟 POLLITO CON PAPAS</h2>
-    <p class="flex-grow-1">1 Pollo TORI + papas + salsas mt (2 la brava + 2 la mayo)</p>
-    <p>*Válido solo para llevar</p>
-    <p><span class="text-decoration-line-through">*Antes S/71.90</span></p>
-    <h2 class="mt-auto">S/64.90</h2>
-  </div>
-</article>
+          <div class="card-body d-flex flex-column">
+            <h2 class="text-danger fw-bold mb-2">🍗🍟 POLLITO CON PAPAS</h2>
+            <p class="flex-grow-1">1 Pollo TORI + papas + salsas mt (2 la brava + 2 la mayo)</p>
+            <p>*Válido solo para llevar</p>
+            <p><span class="text-decoration-line-through">*Antes S/71.90</span></p>
+            <h2 class="mt-auto">S/64.90</h2>
+          </div>
+        </article>
 
-      <!-- MODAL Card 1 -->
-<div class="modal fade" id="modalCard1" tabindex="-1" aria-labelledby="modalCard1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered ">
-    <div class="modal-content ">
-      <div class="modal-header ModalColor">
-        <h5 class="modal-title" id="modalCard1Label">🍗🍟 POLLITO CON PAPAS</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p>1 Pollo TORI + papas + 2 La Brava + 2 La Mayo.</p>
-        <p class="text-muted">Solo válido para llevar.</p>
-        <p>Antes: <del>S/71.90</del></p>
-        <h4 class="text-danger">S/64.90</h4>
+        <!-- MODAL Card 1 -->
+        <div class="modal fade" id="modalCard1" tabindex="-1" aria-labelledby="modalCard1Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content ">
+              <div class="modal-header ModalColor">
+                <h5 class="modal-title" id="modalCard1Label">🍗🍟 POLLITO CON PAPAS</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>1 Pollo TORI + papas + 2 La Brava + 2 La Mayo.</p>
+                <p class="text-muted">Solo válido para llevar.</p>
+                <p>Antes: <del>S/71.90</del></p>
+                <h4 class="text-danger">S/64.90</h4>
 
-        <!-- Cantidad -->
-        <div class="mt-3">
-          <label for="cantidadCard1" class="form-label fw-bold">Cantidad de promociones:</label>
-          <input type="number" id="cantidadCard1" name="cantidadCard1" class="form-control" value="1" min="1" max="10">
+                <!-- Cantidad -->
+                <div class="mt-3">
+                  <label for="cantidadCard1" class="form-label fw-bold">Cantidad de promociones:</label>
+                  <input type="number" id="cantidadCard1" name="cantidadCard1" class="form-control" value="1" min="1"
+                    max="10">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-      <!--Card2 - Grid Item-->
-<article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard2">
-    <div class="card-media">
-    <img src="../IMG/card2.webp" alt="Alitas BBQ" loading="lazy">
-  </div>
+        <!--Card2 - Grid Item-->
+        <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;"
+          data-bs-toggle="modal" data-bs-target="#modalCard2">
+          <div class="card-media">
+            <img src="../IMG/card2.webp" alt="Alitas BBQ" loading="lazy">
+          </div>
 
-  <div class="card-body d-flex flex-column">
-    <h2 class="text-danger fw-bold mb-2">🔥 ALITAS BBQ</h2>
-    <p class="flex-grow-1">8 alitas BBQ + papas medianas + 2 salsas a elección.</p>
-    <p>*Promoción válida para delivery y recoger</p>
-    <p><span class="text-decoration-line-through">*Antes S/45.00</span></p>
-    <h2 class="mt-auto">S/39.90</h2>
-  </div>
-</article>
+          <div class="card-body d-flex flex-column">
+            <h2 class="text-danger fw-bold mb-2">🔥 ALITAS BBQ</h2>
+            <p class="flex-grow-1">8 alitas BBQ + papas medianas + 2 salsas a elección.</p>
+            <p>*Promoción válida para delivery y recoger</p>
+            <p><span class="text-decoration-line-through">*Antes S/45.00</span></p>
+            <h2 class="mt-auto">S/39.90</h2>
+          </div>
+        </article>
 
-      <!-- MODAL Card 2 -->
-<div class="modal fade" id="modalCard2" tabindex="-1" aria-labelledby="modalCard2Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalCard2Label">🎉💥 BANQUEROTI</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p>1 Pollo TORI + papas + chaufa + ensalada + gaseosa 1.5L + 6 salsas (Brava, Mayo, Vinagreta, Huacatay).</p>
-        <p>Antes: <del>S/120.60</del></p>
-        <h4 class="text-danger">S/95.90</h4>
+        <!-- MODAL Card 2 -->
+        <div class="modal fade" id="modalCard2" tabindex="-1" aria-labelledby="modalCard2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalCard2Label">🎉💥 BANQUEROTI</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>1 Pollo TORI + papas + chaufa + ensalada + gaseosa 1.5L + 6 salsas (Brava, Mayo, Vinagreta,
+                  Huacatay).</p>
+                <p>Antes: <del>S/120.60</del></p>
+                <h4 class="text-danger">S/95.90</h4>
 
-        <!-- Cantidad -->
-        <div class="mt-3">
-          <label for="cantidadCard2" class="form-label fw-bold">Cantidad de promociones:</label>
-          <input type="number" id="cantidadCard2" name="cantidadCard2" class="form-control" value="1" min="1" max="10">
+                <!-- Cantidad -->
+                <div class="mt-3">
+                  <label for="cantidadCard2" class="form-label fw-bold">Cantidad de promociones:</label>
+                  <input type="number" id="cantidadCard2" name="cantidadCard2" class="form-control" value="1" min="1"
+                    max="10">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-      <!--Card3 - Grid Item-->
-<article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard3">
-    <div class="card-media">
-    <img src="../IMG/card3.webp" alt="Combo Familiar" loading="lazy">
-  </div>
+        <!--Card3 - Grid Item-->
+        <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;"
+          data-bs-toggle="modal" data-bs-target="#modalCard3">
+          <div class="card-media">
+            <img src="../IMG/card3.webp" alt="Combo Familiar" loading="lazy">
+          </div>
 
-  <div class="card-body d-flex flex-column">
-    <h2 class="text-danger fw-bold mb-2">👨‍👩‍👧‍👦 COMBO FAMILIAR</h2>
-    <p class="flex-grow-1">2 pollos enteros + 2 guarniciones + 4 bebidas pequeñas.</p>
-    <p>*Ideal para 4 personas</p>
-    <p><span class="text-decoration-line-through">*Antes S/120.00</span></p>
-    <h2 class="mt-auto">S/99.90</h2>
-  </div>
-</article>
+          <div class="card-body d-flex flex-column">
+            <h2 class="text-danger fw-bold mb-2">👨‍👩‍👧‍👦 COMBO FAMILIAR</h2>
+            <p class="flex-grow-1">2 pollos enteros + 2 guarniciones + 4 bebidas pequeñas.</p>
+            <p>*Ideal para 4 personas</p>
+            <p><span class="text-decoration-line-through">*Antes S/120.00</span></p>
+            <h2 class="mt-auto">S/99.90</h2>
+          </div>
+        </article>
 
-      <!-- MODAL Card 3 -->
-<div class="modal fade" id="modalCard3" tabindex="-1" aria-labelledby="modalCard3Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalCard3Label">🥤🍗 1/2 COMBO TORI BRASA</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p>1/2 Pollo TORI + papas + ensalada + 2 gaseosas + 4 salsas (Brava, Mayo, Vinagreta).</p>
-        <p>Antes: <del>S/74.80</del></p>
-        <h4 class="text-danger">S/52.90</h4>
+        <!-- MODAL Card 3 -->
+        <div class="modal fade" id="modalCard3" tabindex="-1" aria-labelledby="modalCard3Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalCard3Label">🥤🍗 1/2 COMBO TORI BRASA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>1/2 Pollo TORI + papas + ensalada + 2 gaseosas + 4 salsas (Brava, Mayo, Vinagreta).</p>
+                <p>Antes: <del>S/74.80</del></p>
+                <h4 class="text-danger">S/52.90</h4>
 
-        <!-- Cantidad -->
-        <div class="mt-3">
-          <label for="cantidadCard3" class="form-label fw-bold">Cantidad de promociones:</label>
-          <input type="number" id="cantidadCard3" name="cantidadCard3" class="form-control" value="1" min="1" max="10">
+                <!-- Cantidad -->
+                <div class="mt-3">
+                  <label for="cantidadCard3" class="form-label fw-bold">Cantidad de promociones:</label>
+                  <input type="number" id="cantidadCard3" name="cantidadCard3" class="form-control" value="1" min="1"
+                    max="10">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!--Card4 - Grid Item-->
+        <article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;"
+          data-bs-toggle="modal" data-bs-target="#modalCard4">
+          <div class="card-media">
+            <img src="../IMG/card4.webp" alt="Hamburguesa Especial" loading="lazy">
+          </div>
+
+          <div class="card-body d-flex flex-column">
+            <h2 class="text-danger fw-bold mb-2">🍔 HAMBURGUESA ESPECIAL</h2>
+            <p class="flex-grow-1">Hamburguesa doble con queso, lechuga, tomate y papas pequeñas.</p>
+            <p>*Con opción a añadir bacon</p>
+            <p><span class="text-decoration-line-through">*Antes S/32.90</span></p>
+            <h2 class="mt-auto">S/29.90</h2>
+          </div>
+        </article>
+
       </div>
-      <div class="modal-footer">
-  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!--Card4 - Grid Item-->
-<article class="card text-start cardColor cardAnimacion grid-card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCard4">
-    <div class="card-media">
-    <img src="../IMG/card4.webp" alt="Hamburguesa Especial" loading="lazy">
-  </div>
-
-  <div class="card-body d-flex flex-column">
-    <h2 class="text-danger fw-bold mb-2">🍔 HAMBURGUESA ESPECIAL</h2>
-    <p class="flex-grow-1">Hamburguesa doble con queso, lechuga, tomate y papas pequeñas.</p>
-    <p>*Con opción a añadir bacon</p>
-    <p><span class="text-decoration-line-through">*Antes S/32.90</span></p>
-    <h2 class="mt-auto">S/29.90</h2>
-  </div>
-</article>
-
-    </div>
   </section>
 
   <!-- MODAL Card 4 -->
-<div class="modal fade" id="modalCard4" tabindex="-1" aria-labelledby="modalCard4Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalCard4Label">🥪⚡ PROMO SANGUCHAZO</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p>1 Sanguchazo de Pollo + 1 gaseosa 500 ml.</p>
-        <p>Antes: <del>S/32.40</del></p>
-        <h4 class="text-danger">S/25.90</h4>
-
-        <!-- Cantidad -->
-        <div class="mt-3">
-          <label for="cantidadCard4" class="form-label fw-bold">Cantidad de promociones:</label>
-          <input type="number" id="cantidadCard4" name="cantidadCard4" class="form-control" value="1" min="1" max="10">
+  <div class="modal fade" id="modalCard4" tabindex="-1" aria-labelledby="modalCard4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCard4Label">🥪⚡ PROMO SANGUCHAZO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
-      </div>
-      <div class="modal-footer">
-  <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <div class="modal-body">
+          <p>1 Sanguchazo de Pollo + 1 gaseosa 500 ml.</p>
+          <p>Antes: <del>S/32.40</del></p>
+          <h4 class="text-danger">S/25.90</h4>
+
+          <!-- Cantidad -->
+          <div class="mt-3">
+            <label for="cantidadCard4" class="form-label fw-bold">Cantidad de promociones:</label>
+            <input type="number" id="cantidadCard4" name="cantidadCard4" class="form-control" value="1" min="1"
+              max="10">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.tori.pe/carta-delivery" class="btn btn-danger btn-cta">Pedir Ahora</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
       </div>
     </div>
   </div>
- </div>
 
   <!-- Modal CONTACTO (mailto - sin JS) -->
   <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
@@ -536,7 +594,8 @@
               <label for="contactMensaje" class="form-label">Mensaje</label>
               <textarea id="contactMensaje" name="Mensaje" class="form-control" rows="4" required></textarea>
             </div>
-            <p class="small text-muted mb-0">Este formulario abrirá tu cliente de correo para enviar el mensaje (mailto). Si prefieres, escríbenos a <a href="mailto:contacto@tori.pe">contacto@tori.pe</a>.</p>
+            <p class="small text-muted mb-0">Este formulario abrirá tu cliente de correo para enviar el mensaje
+              (mailto). Si prefieres, escríbenos a <a href="mailto:contacto@tori.pe">contacto@tori.pe</a>.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -553,7 +612,7 @@
     <div class="container">
       <!-- Contenedor principal con Flexbox -->
       <div class="footer-flex-container d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
-        
+
         <!-- Columna 1: Información de Contacto -->
         <div class="footer-section flex-fill">
           <h5 class="text-danger fw-bold mb-3">📍 INFORMACIÓN DE CONTACTO</h5>
@@ -581,32 +640,36 @@
         <!-- Columna 3: Libro de Reclamaciones y sección de Redes Sociales -->
         <div class="footer-section d-flex flex-column align-items-center">
           <h6 class="text-danger fw-bold mb-2">Libro de Reclamaciones</h6>
-          <img src="../IMG/libro.jpg" class="AumentarImagenLibro" alt="Libro de Reclamaciones" style="max-width: 80px; width:80px; height:80px;" width="80" height="80" loading="lazy" />
+          <img src="../IMG/libro.jpg" class="AumentarImagenLibro" alt="Libro de Reclamaciones" loading="lazy" />
 
           <!-- Nueva sección: Redes sociales con icono + texto para reservar espacio y evitar agrupamiento visual -->
           <div class="mt-3 footer-socials w-100 text-center">
             <h6 class="text-danger fw-bold mb-2">Síguenos</h6>
             <ul class="list-unstyled footer-social-list d-flex flex-column gap-2 mb-0">
               <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
-                <a href="https://www.facebook.com/toripolleria/?locale=es_LA" aria-label="Facebook - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                <a href="https://www.facebook.com/toripolleria/?locale=es_LA" aria-label="Facebook - Tori Pollería"
+                  target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
                   <img src="../IMG/ICONO-FACEBOOK.png" alt="Facebook" width="28" height="28" loading="lazy" />
                   <span class="ms-2">Facebook</span>
                 </a>
               </li>
               <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
-                <a href="https://www.instagram.com/toripolleria/" aria-label="Instagram - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                <a href="https://www.instagram.com/toripolleria/" aria-label="Instagram - Tori Pollería" target="_blank"
+                  rel="noopener noreferrer" class="d-inline-flex align-items-center">
                   <img src="../IMG/ICONO-INSTAGRAM.png" alt="Instagram" width="28" height="28" loading="lazy" />
                   <span class="ms-2">Instagram</span>
                 </a>
               </li>
               <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
-                <a href="https://www.tiktok.com/@toripolleriaoficial" aria-label="TikTok - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                <a href="https://www.tiktok.com/@toripolleriaoficial" aria-label="TikTok - Tori Pollería"
+                  target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
                   <img src="../IMG/ICONO-TIKTOK.jpg" alt="Tik Tok" width="28" height="28" loading="lazy" />
                   <span class="ms-2">TikTok</span>
                 </a>
               </li>
               <li class="footer-social-item d-flex align-items-center justify-content-center gap-2">
-                <a href="https://www.youtube.com/@ToriPolleria" aria-label="YouTube - Tori Pollería" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center">
+                <a href="https://www.youtube.com/@ToriPolleria" aria-label="YouTube - Tori Pollería" target="_blank"
+                  rel="noopener noreferrer" class="d-inline-flex align-items-center">
                   <img src="../IMG/youGpng.png" alt="YouTube" width="28" height="28" loading="lazy" />
                   <span class="ms-2">YouTube</span>
                 </a>
@@ -615,7 +678,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Copyright centrado -->
       <hr class="my-4">
       <div class="d-flex justify-content-center">
@@ -625,8 +688,14 @@
       </div>
     </div>
   </footer>
-  
+
   <!-- Scripts -->
   <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Main JS (login + register handlers) -->
+  <script src="../JS/main.js"></script>
 </body>
+
 </html>

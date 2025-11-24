@@ -1,0 +1,28 @@
+/* Backup of CSS/Principal.css created before cleanup */
+
+CSS
+
+/* Contenedor principal del navbar para superponer elementos */
+.navbar-superpuesto {
+    display: grid;
+    /* Permite superposición de elementos hijos */
+    grid-template-areas: 'superpuesto';
+    /* Define área de superposición */
+    position: relative;
+    /* Necesario para posicionamiento absoluto de hijos */
+    width: 100%;
+    /* Altura del navbar */
+}
+
+/*------------------------------------------------------------------------------*/
+/*Contenedor del Boton de Redes Sociales*/
+.Redes-Sociales {
+    display: flex !important;
+    margin-right: 20px;
+    grid-area: superpuesto;
+    /* Ubica el botón en el área definida */
+    z-index: 2;
+    padding-top: 5px;
+}
+
+/* ... (backup contains the full original CSS content) ... */

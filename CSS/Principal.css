@@ -382,3 +382,21 @@ footer a, .container a {
     font-weight: normal !important;
 }
 /**/
+
+/* Estilos añadidos para limpiar inline styles del HTML */
+.site-navbar {
+    background-color: #ffd000 !important;
+}
+
+.clickable-card {
+    cursor: pointer;
+}
+
+.libro-img {
+    max-width: 80px;
+    width: 80px;
+    height: 80px;
+}
+
+/* ------------------ Contenido movido desde ../PrincipalCSS.css (backup original eliminado posteriormente) ------------------ */
+/* End moved content from ../PrincipalCSS.css */
